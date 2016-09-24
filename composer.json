@@ -1,0 +1,24 @@
+{
+    "name": "seeren/log",
+    "description": "Psr-3 implementation",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "Cyril Ichti",
+        "email": "consultant@seeren.fr",
+        "homepage" : "http://www.seeren.fr",
+      }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+      "php": ">=7.0.1";
+      "psr/log": "~1.0"
+    },
+    "autoload": {
+      "psr-4": {
+		"Seeren\\Log\\": "src/",
+		"Seeren\\Log\\Test\\": "test/"
+      }
+  }
+}

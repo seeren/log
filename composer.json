@@ -7,7 +7,7 @@
       {
         "name": "Cyril Ichti",
         "email": "consultant@seeren.fr",
-        "homepage" : "http://www.seeren.fr",
+        "homepage" : "http://www.seeren.fr"
       }
     ],
     "minimum-stability": "dev",

@@ -16,7 +16,7 @@
 namespace Seeren\Log;
 
 use Psr\Log\LoggerInterface;
-use InvalidArgumentException;
+use Psr\Log\InvalidArgumentException;
 
 /**
  * Class for log

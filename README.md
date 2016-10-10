@@ -49,8 +49,8 @@ Running tests with phpunit in the test folder.
 Seeren\Log\Test\LoggerTest extends Psr\Log\Test\LoggerInterfaceTest
 
 ```
-$ phpunit seeren/src/log/test/LoggerTest.php
-$ phpunit seeren/src/log/test/LogLevelTest.php
+$ phpunit test/LoggerTest.php
+$ phpunit test/LogLevelTest.php
 ```
 
 #### License

@@ -16,7 +16,7 @@
 namespace Seeren\Log;
 
 use Psr\Log\LoggerInterface;
-use Psr\Log\InvalidArgumentException;
+use InvalidArgumentException;
 
 /**
  * Class for log
@@ -59,7 +59,8 @@ class Logger implements LoggerInterface
 
    /**
     * Get logs
-    *
+    * Implemented for pass Psr\Log\Test\LoggerInterfaceTest
+    * 
     * @return array log collection
     */
    public final function getLogs()
@@ -180,7 +181,7 @@ class Logger implements LoggerInterface
     *
     * @return string log
     * 
-    * @throws InvalidArgumentException for invalid level
+    * @throws \InvalidArgumentException for invalid level
     */
    public function log($level, $message, array $context = []): string
    {
@@ -189,7 +190,7 @@ class Logger implements LoggerInterface
                "Can't log: invalid level " . $level);
        }
        $body = $level . " " . trim($message);
-       foreach ($context as $key => &$value) {
+       foreach ($context as $key => $value) {
            if (is_string($value)) {
                $body = str_replace("{" . $key . "}", $value, $body);
            }

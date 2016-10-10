@@ -49,7 +49,7 @@ class Logger implements LoggerInterface
    {
        $this->includePath = rtrim(
            (!$includePath
-         ? dirname(dirname(dirname(dirname(dirname(dirname(__FILE__))))))
+         ? dirname(dirname(dirname(dirname(dirname(__FILE__)))))
          . DIRECTORY_SEPARATOR
          . "log"
          : $includePath), DIRECTORY_SEPARATOR

@@ -20,9 +20,8 @@ namespace Seeren\Log;
  * 
  * @category Seeren
  * @package Log
- * @final
  */
-final class Daily extends Logger
+class Daily extends Logger
 {
 
    /**
@@ -31,7 +30,7 @@ final class Daily extends Logger
     * @param string $includePath include path
     * @return null
     */
-   public final function __construct(string $includePath = null)
+   public function __construct(string $includePath = null)
    {
        parent::__construct($includePath);
    }

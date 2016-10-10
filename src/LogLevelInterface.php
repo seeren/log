@@ -24,6 +24,40 @@ namespace Seeren\Log;
 interface LogLevelInterface
 {
 
+    const
+        /**
+         * @var string log level
+         */
+        EMERGENCY = "emergency",
+        /**
+         * @var string log level
+         */
+        ALERT     = "alert",
+        /**
+         * @var string log level
+         */
+        CRITICAL  = "critical",
+        /**
+         * @var string log level
+         */
+        ERROR     = "error",
+        /**
+         * @var string log level
+         */
+        WARNING   = "warning",
+        /**
+         * @var string log level
+         */
+        NOTICE    = "notice",
+        /**
+         * @var string log level
+         */
+        INFO      = "info",
+        /**
+         * @var string log level
+         */
+        DEBUG     = "debug";
+
    /**
     * Get level
     * 

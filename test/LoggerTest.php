@@ -42,9 +42,8 @@ class LoggerTest extends LoggerInterfaceTest
    public final function getLogger()
    {
        if (!$this->logger) {
-           $this->logger = (
-               new ReflectionClass(Logger::class)
-           )->newInstanceArgs([]);
+           $this->logger = (new ReflectionClass(Logger::class))
+                           ->newInstanceArgs([]);
        }
        return $this->logger;
    }

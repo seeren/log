@@ -43,7 +43,7 @@ abstract class LogLevelInterfaceTest extends \PHPUnit_Framework_TestCase
         $mock = $this->getLogLevel();
         $this->assertTrue(
             LogLevel::EMERGENCY === $mock->level(42000)
-         && LogLevel::ALERT=== $mock->level(0)
+         && LogLevel::ALERT === $mock->level(0)
          && LogLevel::CRITICAL === $mock->level(E_ERROR)
          && LogLevel::ERROR === $mock->level(E_USER_ERROR)
          && LogLevel::WARNING === $mock->level(E_WARNING)

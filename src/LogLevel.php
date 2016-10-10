@@ -15,15 +15,13 @@
 
 namespace Seeren\Log;
 
-use Psr\Log\LogLevel;
-
 /**
  * Class for determine log level
  * 
  * @category Seeren
  * @package Log
  */
-class LogLevel extends LogLevel implements LogLevelInterface
+class LogLevel implements LogLevelInterface
 {
 
    /**

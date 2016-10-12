@@ -24,9 +24,8 @@ use ReflectionClass;
  * @category Seeren
  * @package Log
  * @subpackage Test
- * @final
  */
-final class LogLevelTest extends LogLevelInterfaceTest
+class LogLevelTest extends LogLevelInterfaceTest
 {
 
     /**

@@ -13,8 +13,6 @@ Create logger and use log of different level. LogLevelInterface provide method f
 /**
  * @see http://www.php-fig.org/psr/psr-3/
  */
- 
-use Seeren\Log\Logger;
 
 $logger = new Logger();
 $logger->log("info", "{user} is logged", ["user" => "Bob"]);

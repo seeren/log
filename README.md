@@ -37,20 +37,14 @@ new Yeardly;
 LogLevel provide method for get level corresponding to a predefined constant error.
 
 ```php
-$logLevel = new LogLevel();
-$level = $logLevel->level(E_USER_ERROR);
+$level = (new LogLevel())->level(E_USER_ERROR);
 ```
 
 #### Running the tests
 
 Running tests with phpunit in the test folder.
-Seeren\Log\Test\LoggerTest extends Psr\Log\Test\LoggerInterfaceTest
 
 ```
 $ phpunit test/LoggerTest.php
 $ phpunit test/LogLevelTest.php
 ```
-
-#### License
-
-[MIT](https://github.com/Seeren/Seeren/blob/master/LICENSE)

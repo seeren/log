@@ -27,6 +27,7 @@ LogLevel provide method for get level corresponding to a predefined constant err
 ```php
 $level = (new LogLevel())->level(E_USER_ERROR);
 ```
+
 ## Installation
 Require this package with composer
 ```

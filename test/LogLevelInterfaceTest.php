@@ -25,7 +25,7 @@ use Seeren\Log\LogLevel;
  * @subpackage Test
  * @abstract
  */
-abstract class LogLevelInterfaceTest extends \PHPUnit_Framework_TestCase
+abstract class LogLevelInterfaceTest extends \PHPUnit\Framework\TestCase
 {
 
     /**

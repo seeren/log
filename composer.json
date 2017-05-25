@@ -17,10 +17,14 @@
     },
     "autoload": {
       "psr-4": {
-		"Seeren\\Log\\": "src/",
+		"Seeren\\Log\\": "src/"
+      }
+    },
+    "autoload-dev": {
+      "psr-4": {
 		"Seeren\\Log\\Test\\": "test/"
       }
-   },
+    },
     "require-dev": {
         "phpunit/phpunit": "6.1"
     }

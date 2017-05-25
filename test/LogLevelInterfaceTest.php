@@ -10,12 +10,13 @@
  *
  * @copyright (c) Cyril Ichti <consultant@seeren.fr>
  * @link http://www.seeren.fr/ Seeren
- * @version 1.0.1
+ * @version 1.0.3
  */
 
 namespace Seeren\Log\Test;
 
 use Seeren\Log\LogLevel;
+use Seeren\Log\LogLevelInterface;
 
 /**
  * Class for test LogLevelInterface
@@ -33,7 +34,7 @@ abstract class LogLevelInterfaceTest extends \PHPUnit\Framework\TestCase
      * 
      * @return LogLevelInterface log level
      */
-    abstract protected function getLogLevel();
+    abstract protected function getLogLevel(): LogLevelInterface;
 
    /**
     * Test LogLevel::level
@@ -43,13 +44,13 @@ abstract class LogLevelInterfaceTest extends \PHPUnit\Framework\TestCase
         $mock = $this->getLogLevel();
         $this->assertTrue(
             LogLevel::EMERGENCY === $mock->level(42000)
-         && LogLevel::ALERT === $mock->level(0)
-         && LogLevel::CRITICAL === $mock->level(E_ERROR)
-         && LogLevel::ERROR === $mock->level(E_USER_ERROR)
-         && LogLevel::WARNING === $mock->level(E_WARNING)
-         && LogLevel::NOTICE === $mock->level(E_NOTICE)
-         && LogLevel::INFO === $mock->level(E_STRICT)
-         && LogLevel::DEBUG === $mock->level(E_DEPRECATED)
+         && LogLevel::ALERT     === $mock->level(0)
+         && LogLevel::CRITICAL  === $mock->level(E_ERROR)
+         && LogLevel::ERROR     === $mock->level(E_USER_ERROR)
+         && LogLevel::WARNING   === $mock->level(E_WARNING)
+         && LogLevel::NOTICE    === $mock->level(E_NOTICE)
+         && LogLevel::INFO      === $mock->level(E_STRICT)
+         && LogLevel::DEBUG     === $mock->level(E_DEPRECATED)
         );
    }
 

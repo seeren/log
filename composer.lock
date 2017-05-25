@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7e37682dd497b012c1443ffbab2f263e",
-    "content-hash": "9c3c561d1dd6c3cfb622eedb1b5b80bb",
+    "hash": "367f3ac94b415d636dd4233582673b31",
+    "content-hash": "84532e4c5b7d2ed0d8d10293c8dd1a72",
     "packages": [
         {
             "name": "psr/log",
@@ -465,16 +465,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "5.2.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "e648abfd8ffb1d54ad549b027b75e376e9055d02"
+                "reference": "dc421f9ca5082a0c0cb04afb171c765f79add85b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/e648abfd8ffb1d54ad549b027b75e376e9055d02",
-                "reference": "e648abfd8ffb1d54ad549b027b75e376e9055d02",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/dc421f9ca5082a0c0cb04afb171c765f79add85b",
+                "reference": "dc421f9ca5082a0c0cb04afb171c765f79add85b",
                 "shasum": ""
             },
             "require": {
@@ -485,7 +485,7 @@
                 "phpunit/php-text-template": "^1.2",
                 "phpunit/php-token-stream": "^1.4.11 || ^2.0",
                 "sebastian/code-unit-reverse-lookup": "^1.0",
-                "sebastian/environment": "^2.0",
+                "sebastian/environment": "^3.0",
                 "sebastian/version": "^2.0",
                 "theseer/tokenizer": "^1.1"
             },
@@ -525,7 +525,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-04-20 10:00:57"
+            "time": "2017-04-21 08:03:57"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -715,16 +715,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "6.1.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "2aa57c530381662b01c2cf705b03e8c12e918f1d"
+                "reference": "d3180f13eac8d8e22d0210c6966ff3060300ed21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/2aa57c530381662b01c2cf705b03e8c12e918f1d",
-                "reference": "2aa57c530381662b01c2cf705b03e8c12e918f1d",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/d3180f13eac8d8e22d0210c6966ff3060300ed21",
+                "reference": "d3180f13eac8d8e22d0210c6966ff3060300ed21",
                 "shasum": ""
             },
             "require": {
@@ -738,14 +738,14 @@
                 "phar-io/version": "^1.0",
                 "php": "^7.0",
                 "phpspec/prophecy": "^1.7",
-                "phpunit/php-code-coverage": "^5.0",
+                "phpunit/php-code-coverage": "^5.2",
                 "phpunit/php-file-iterator": "^1.4",
                 "phpunit/php-text-template": "^1.2",
                 "phpunit/php-timer": "^1.0.6",
                 "phpunit/phpunit-mock-objects": "^4.0",
                 "sebastian/comparator": "^2.0",
-                "sebastian/diff": "^1.2",
-                "sebastian/environment": "^2.0",
+                "sebastian/diff": "^1.4.3 || ^2.0",
+                "sebastian/environment": "^3.0.2",
                 "sebastian/exporter": "^3.1",
                 "sebastian/global-state": "^1.1 || ^2.0",
                 "sebastian/object-enumerator": "^3.0.2",
@@ -795,7 +795,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-04-07 04:45:38"
+            "time": "2017-05-22 18:35:57"
         },
         {
             "name": "phpunit/phpunit-mock-objects",

@@ -15,7 +15,6 @@
 
 namespace Seeren\Log\Test;
 
-use Psr\Log\Test\LoggerInterfaceTest;
 use Psr\Log\LoggerInterface;
 use Seeren\Log\Logger;
 use ReflectionClass;
@@ -37,9 +36,11 @@ class LoggerTest extends LoggerInterfaceTest
        $logger;
 
    /**
+    * Get logger
+    * 
     * @return LoggerInterface
     */
-   public final function getLogger()
+   public final function getLogger(): LoggerInterface
    {
        if (!$this->logger) {
            $this->logger = (new ReflectionClass(Logger::class))
@@ -49,12 +50,8 @@ class LoggerTest extends LoggerInterfaceTest
    }
 
    /**
-    * This must return the log messages in order.
-    *
-    * The simple formatting of the messages is: "<LOG LEVEL> <MESSAGE>".
-    *
-    * Example ->error('Foo') would yield "error Foo".
-    *
+    * Get logs
+    * 
     * @return string[]
     */
    public final function getLogs()

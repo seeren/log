@@ -10,12 +10,13 @@
  *
  * @copyright (c) Cyril Ichti <consultant@seeren.fr>
  * @link http://www.seeren.fr/ Seeren
- * @version 1.0.1
+ * @version 1.0.2
  */
 
 namespace Seeren\Log\Test;
 
 use Seeren\Log\LogLevel;
+use Seeren\Log\LogLevelInterface;
 use ReflectionClass;
 
 /**
@@ -33,7 +34,7 @@ class LogLevelTest extends LogLevelInterfaceTest
      * 
      * @return LogLevelInterface log level
      */
-    protected final function getLogLevel()
+    protected final function getLogLevel(): LogLevelInterface
     {
         return (new ReflectionClass(LogLevel::class))->newInstanceArgs([]);
     }

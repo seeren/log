@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1495758160">
+  <project timestamp="1495758160">
+    <package name="Seeren\Log">
+      <file name="C:\xampp\htdocs\seeren-dev-master\log\src/Daily.php">
+        <class name="Daily" namespace="Seeren\Log" fullPackage="Log" category="Seeren" package="Log">
+          <metrics complexity="3" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="0" elements="9" coveredelements="0"/>
+        </class>
+        <line num="33" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="35" type="stmt" count="0"/>
+        <line num="36" type="stmt" count="0"/>
+        <line num="49" type="method" name="log" visibility="public" complexity="2" crap="6" count="0"/>
+        <line num="51" type="stmt" count="0"/>
+        <line num="52" type="stmt" count="0"/>
+        <line num="53" type="stmt" count="0"/>
+        <line num="54" type="stmt" count="0"/>
+        <line num="56" type="stmt" count="0"/>
+        <metrics loc="59" ncloc="24" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="0" elements="9" coveredelements="0"/>
+      </file>
+      <file name="C:\xampp\htdocs\seeren-dev-master\log\src/LogLevel.php">
+        <class name="LogLevel" namespace="Seeren\Log" fullPackage="Log" category="Seeren" package="Log">
+          <metrics complexity="26" methods="9" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="34" coveredstatements="33" elements="43" coveredelements="41"/>
+        </class>
+        <line num="32" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="34" type="stmt" count="1"/>
+        <line num="42" type="method" name="level" visibility="public" complexity="9" crap="9.02" count="1"/>
+        <line num="45" type="stmt" count="1"/>
+        <line num="46" type="stmt" count="1"/>
+        <line num="47" type="stmt" count="1"/>
+        <line num="48" type="stmt" count="1"/>
+        <line num="49" type="stmt" count="1"/>
+        <line num="50" type="stmt" count="1"/>
+        <line num="51" type="stmt" count="1"/>
+        <line num="52" type="stmt" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="54" type="stmt" count="1"/>
+        <line num="55" type="stmt" count="1"/>
+        <line num="56" type="stmt" count="1"/>
+        <line num="57" type="stmt" count="1"/>
+        <line num="58" type="stmt" count="1"/>
+        <line num="59" type="stmt" count="1"/>
+        <line num="60" type="stmt" count="1"/>
+        <line num="62" type="stmt" count="0"/>
+        <line num="72" type="method" name="emergency" visibility="protected" complexity="1" crap="1" count="1"/>
+        <line num="74" type="stmt" count="1"/>
+        <line num="82" type="method" name="critical" visibility="protected" complexity="4" crap="4" count="1"/>
+        <line num="84" type="stmt" count="1"/>
+        <line num="85" type="stmt" count="1"/>
+        <line num="86" type="stmt" count="1"/>
+        <line num="87" type="stmt" count="1"/>
+        <line num="96" type="method" name="error" visibility="protected" complexity="2" crap="2" count="1"/>
+        <line num="98" type="stmt" count="1"/>
+        <line num="99" type="stmt" count="1"/>
+        <line num="108" type="method" name="warning" visibility="protected" complexity="4" crap="4" count="1"/>
+        <line num="110" type="stmt" count="1"/>
+        <line num="111" type="stmt" count="1"/>
+        <line num="112" type="stmt" count="1"/>
+        <line num="113" type="stmt" count="1"/>
+        <line num="122" type="method" name="notice" visibility="protected" complexity="2" crap="2" count="1"/>
+        <line num="124" type="stmt" count="1"/>
+        <line num="125" type="stmt" count="1"/>
+        <line num="134" type="method" name="info" visibility="protected" complexity="1" crap="1" count="1"/>
+        <line num="136" type="stmt" count="1"/>
+        <line num="145" type="method" name="debug" visibility="protected" complexity="2" crap="2" count="1"/>
+        <line num="147" type="stmt" count="1"/>
+        <line num="148" type="stmt" count="1"/>
+        <metrics loc="151" ncloc="80" classes="1" methods="9" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="34" coveredstatements="33" elements="43" coveredelements="41"/>
+      </file>
+      <file name="C:\xampp\htdocs\seeren-dev-master\log\src/Logger.php">
+        <class name="Logger" namespace="Seeren\Log" fullPackage="Log" category="Seeren" package="Log">
+          <metrics complexity="15" methods="11" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="25" coveredstatements="25" elements="36" coveredelements="36"/>
+        </class>
+        <line num="48" type="method" name="__construct" visibility="public" complexity="2" crap="2" count="13"/>
+        <line num="50" type="stmt" count="13"/>
+        <line num="51" type="stmt" count="13"/>
+        <line num="52" type="stmt" count="13"/>
+        <line num="53" type="stmt" count="13"/>
+        <line num="54" type="stmt" count="13"/>
+        <line num="55" type="stmt" count="13"/>
+        <line num="56" type="stmt" count="13"/>
+        <line num="64" type="method" name="getLogs" visibility="public" complexity="1" crap="1" count="11"/>
+        <line num="66" type="stmt" count="11"/>
+        <line num="77" type="method" name="emergency" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="79" type="stmt" count="1"/>
+        <line num="90" type="method" name="alert" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="92" type="stmt" count="1"/>
+        <line num="103" type="method" name="critical" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="105" type="stmt" count="1"/>
+        <line num="116" type="method" name="error" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="118" type="stmt" count="1"/>
+        <line num="129" type="method" name="warning" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="131" type="stmt" count="1"/>
+        <line num="142" type="method" name="notice" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="144" type="stmt" count="1"/>
+        <line num="155" type="method" name="info" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="157" type="stmt" count="1"/>
+        <line num="168" type="method" name="debug" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="170" type="stmt" count="1"/>
+        <line num="184" type="method" name="log" visibility="public" complexity="4" crap="4" count="12"/>
+        <line num="186" type="stmt" count="12"/>
+        <line num="187" type="stmt" count="1"/>
+        <line num="188" type="stmt" count="1"/>
+        <line num="190" type="stmt" count="11"/>
+        <line num="191" type="stmt" count="11"/>
+        <line num="192" type="stmt" count="11"/>
+        <line num="193" type="stmt" count="11"/>
+        <line num="196" type="stmt" count="11"/>
+        <line num="197" type="stmt" count="11"/>
+        <metrics loc="200" ncloc="89" classes="1" methods="11" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="25" coveredstatements="25" elements="36" coveredelements="36"/>
+      </file>
+      <file name="C:\xampp\htdocs\seeren-dev-master\log\src/Monthly.php">
+        <class name="Monthly" namespace="Seeren\Log" fullPackage="Log" category="Seeren" package="Log">
+          <metrics complexity="3" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="59" ncloc="24" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="C:\xampp\htdocs\seeren-dev-master\log\src/Yeardly.php">
+        <class name="Yeardly" namespace="Seeren\Log" fullPackage="Log" category="Seeren" package="Log">
+          <metrics complexity="3" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="59" ncloc="24" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+    </package>
+    <file name="C:\xampp\htdocs\seeren-dev-master\log\src/LogLevelInterface.php">
+      <metrics loc="69" ncloc="21" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <metrics files="6" loc="597" ncloc="262" classes="3" methods="22" coveredmethods="19" conditionals="0" coveredconditionals="0" statements="66" coveredstatements="58" elements="88" coveredelements="77"/>
+  </project>
+</coverage>

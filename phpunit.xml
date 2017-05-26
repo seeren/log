@@ -11,6 +11,9 @@
     <testsuite name="log">
         <directory suffix="Test.php">./test</directory>
     </testsuite>
+    <logging>
+        <log type="coverage-clover" target="build/logs/clover.xml"/>
+    </logging>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">./src</directory>

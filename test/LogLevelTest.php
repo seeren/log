@@ -26,7 +26,7 @@ use ReflectionClass;
  * @package Log
  * @subpackage Test
  */
-class LogLevelTest extends LogLevelInterfaceTest
+class LogLevelTest extends AbstractLogLevelTest
 {
 
     /**
@@ -37,6 +37,30 @@ class LogLevelTest extends LogLevelInterfaceTest
     protected final function getLogLevel(): LogLevelInterface
     {
         return (new ReflectionClass(LogLevel::class))->newInstanceArgs([]);
+    }
+
+    /**
+     * @covers \Seeren\Log\LogLevel::__construct
+     */
+    public function testImplements()
+    {
+        parent::assertImplements();
+    }
+
+    /**
+     * @covers \Seeren\Log\LogLevel::__construct
+     * @covers \Seeren\Log\LogLevel::level
+     * @covers \Seeren\Log\LogLevel::emergency
+     * @covers \Seeren\Log\LogLevel::critical
+     * @covers \Seeren\Log\LogLevel::error
+     * @covers \Seeren\Log\LogLevel::warning
+     * @covers \Seeren\Log\LogLevel::notice
+     * @covers \Seeren\Log\LogLevel::info
+     * @covers \Seeren\Log\LogLevel::debug
+     */
+    public function testLevel()
+    {
+        parent::assetLevel();
     }
 
 }

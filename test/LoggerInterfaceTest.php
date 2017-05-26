@@ -10,13 +10,14 @@
  *
  * @copyright (c) Cyril Ichti <consultant@seeren.fr>
  * @link http://www.seeren.fr/ Seeren
- * @version 1.0.1
+ * @version 1.0.2
  */
 
 namespace Seeren\Log\Test;
 
 use Psr\Log\LoggerInterface;
 use Psr\Log\LogLevel;
+use Exception;
 
 /**
  * Class for test LoggerInterface
@@ -34,7 +35,7 @@ abstract class LoggerInterfaceTest extends \PHPUnit\Framework\TestCase
      * 
      * @return LoggerInterface
      */
-    abstract public function getLogger(): LoggerInterface;
+    abstract protected function getLogger(): LoggerInterface;
 
    /**
     * Get logs
@@ -44,7 +45,7 @@ abstract class LoggerInterfaceTest extends \PHPUnit\Framework\TestCase
     abstract public function getLogs();
 
     /**
-     * Test instanceof LoggerInterface
+     * @covers \Seeren\Log\Logger::__construct
      */
     public function testImplements()
     {
@@ -52,64 +53,169 @@ abstract class LoggerInterfaceTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @dataProvider provideLevelsAndMessages
-     * 
-     * @param string $level
-     * @param string $message
+     * @covers \Seeren\Log\Logger::__construct
+     * @covers \Seeren\Log\Logger::alert
+     * @covers \Seeren\Log\Logger::log
+     * @covers \Seeren\Log\Logger::getLogs
      */
-    public function testLogsAtAllLevels($level, $message)
+    public function testAlert()
     {
-        $logger = $this->getLogger();
-        $logger->{$level}($message, ["user" => "Bob"]);
-        $logger->log($level, $message, ["user" => "Bob"]);
-        $this->assertEquals([
+        $level = LogLevel::ALERT;
+        $message = "message of level "
+            . $level
+            . " with context: {user}";
+            $logger = $this->getLogger();
+            $logger->{$level}($message, ["user" => "Bob"]);
+            $this->assertEquals([
                 $level." message of level ".$level." with context: Bob",
-                $level." message of level ".$level." with context: Bob",
-            ],
-            $this->getLogs());
+                ],
+                $this->getLogs());
     }
 
     /**
-     * Provide levels and messages
-     * 
-     * @return array levels and message
+     * @covers \Seeren\Log\Logger::__construct
+     * @covers \Seeren\Log\Logger::critical
+     * @covers \Seeren\Log\Logger::log
+     * @covers \Seeren\Log\Logger::getLogs
      */
-    public function provideLevelsAndMessages()
+    public function testCritical()
     {
-        return [
-            LogLevel::EMERGENCY => [
-                LogLevel::EMERGENCY,
-                "message of level emergency with context: {user}"
-            ],
-            LogLevel::ALERT => [
-                LogLevel::ALERT,
-                "message of level alert with context: {user}"
-            ],
-            LogLevel::CRITICAL => [
-                LogLevel::CRITICAL,
-                "message of level critical with context: {user}"],
-            LogLevel::ERROR => [
-                LogLevel::ERROR,
-                "message of level error with context: {user}"],
-            LogLevel::WARNING => [
-                LogLevel::WARNING,
-                "message of level warning with context: {user}"],
-            LogLevel::NOTICE => [
-                LogLevel::NOTICE,
-                "message of level notice with context: {user}"],
-            LogLevel::INFO => [
-                LogLevel::INFO,
-                "message of level info with context: {user}"],
-            LogLevel::DEBUG => [
-                LogLevel::DEBUG,
-                "message of level debug with context: {user}"],
-        ];
+        $level = LogLevel::CRITICAL;
+        $message = "message of level "
+            . $level
+            . " with context: {user}";
+            $logger = $this->getLogger();
+            $logger->{$level}($message, ["user" => "Bob"]);
+            $this->assertEquals([
+                $level." message of level ".$level." with context: Bob",
+                ],
+                $this->getLogs());
     }
 
     /**
-     * Test invalid argument exception
-     * 
+     * @covers \Seeren\Log\Logger::__construct
+     * @covers \Seeren\Log\Logger::debug
+     * @covers \Seeren\Log\Logger::log
+     * @covers \Seeren\Log\Logger::getLogs
+     */
+    public function testDebug()
+    {
+        $level = LogLevel::DEBUG;
+        $message = "message of level "
+            . $level
+            . " with context: {user}";
+            $logger = $this->getLogger();
+            $logger->{$level}($message, ["user" => "Bob"]);
+            $this->assertEquals([
+                $level." message of level ".$level." with context: Bob",
+                ],
+                $this->getLogs());
+    }
+
+    /**
+     * @covers \Seeren\Log\Logger::__construct
+     * @covers \Seeren\Log\Logger::emergency
+     * @covers \Seeren\Log\Logger::log
+     * @covers \Seeren\Log\Logger::getLogs
+     */
+    public function testEmergency()
+    {
+        $level = LogLevel::EMERGENCY;
+        $message = "message of level "
+            . $level
+            . " with context: {user}";
+            $logger = $this->getLogger();
+            $logger->{$level}($message, ["user" => "Bob"]);
+            $this->assertEquals([
+                $level." message of level ".$level." with context: Bob",
+            ],
+                $this->getLogs());
+    }
+
+    /**
+     * @covers \Seeren\Log\Logger::__construct
+     * @covers \Seeren\Log\Logger::error
+     * @covers \Seeren\Log\Logger::log
+     * @covers \Seeren\Log\Logger::getLogs
+     */
+    public function testError()
+    {
+        $level = LogLevel::ERROR;
+        $message = "message of level "
+            . $level
+            . " with context: {user}";
+            $logger = $this->getLogger();
+            $logger->{$level}($message, ["user" => "Bob"]);
+            $this->assertEquals([
+                $level." message of level ".$level." with context: Bob",
+                ],
+                $this->getLogs());
+    }
+
+    /**
+     * @covers \Seeren\Log\Logger::__construct
+     * @covers \Seeren\Log\Logger::info
+     * @covers \Seeren\Log\Logger::log
+     * @covers \Seeren\Log\Logger::getLogs
+     */
+    public function testInfo()
+    {
+        $level = LogLevel::INFO;
+        $message = "message of level "
+            . $level
+            . " with context: {user}";
+            $logger = $this->getLogger();
+            $logger->{$level}($message, ["user" => "Bob"]);
+            $this->assertEquals([
+                $level." message of level ".$level." with context: Bob",
+                ],
+                $this->getLogs());
+    }
+
+    /**
+     * @covers \Seeren\Log\Logger::__construct
+     * @covers \Seeren\Log\Logger::notice
+     * @covers \Seeren\Log\Logger::log
+     * @covers \Seeren\Log\Logger::getLogs
+     */
+    public function testNotice()
+    {
+        $level = LogLevel::NOTICE;
+        $message = "message of level "
+            . $level
+            . " with context: {user}";
+            $logger = $this->getLogger();
+            $logger->{$level}($message, ["user" => "Bob"]);
+            $this->assertEquals([
+                $level." message of level ".$level." with context: Bob",
+                ],
+                $this->getLogs());
+    }
+
+    /**
+     * @covers \Seeren\Log\Logger::__construct
+     * @covers \Seeren\Log\Logger::warning
+     * @covers \Seeren\Log\Logger::log
+     * @covers \Seeren\Log\Logger::getLogs
+     */
+    public function testWarning()
+    {
+        $level = LogLevel::WARNING;
+        $message = "message of level "
+            . $level
+            . " with context: {user}";
+            $logger = $this->getLogger();
+            $logger->{$level}($message, ["user" => "Bob"]);
+            $this->assertEquals([
+                $level." message of level ".$level." with context: Bob",
+                ],
+                $this->getLogs());
+    }
+
+    /**
      * @expectedException \Psr\Log\InvalidArgumentException
+     * @covers \Seeren\Log\Logger::__construct
+     * @covers \Seeren\Log\Logger::log
      */
     public function testThrowsOnInvalidLevel()
     {
@@ -117,24 +223,31 @@ abstract class LoggerInterfaceTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * Test context replacement
+     * @covers \Seeren\Log\Logger::__construct
+     * @covers \Seeren\Log\Logger::log
+     * @covers \Seeren\Log\Logger::getLogs
      */
     public function testContextReplacement()
     {
         $logger = $this->getLogger();
-        $logger->info(
+        $logger->log(
+            "debug",
             "{Message {nothing} {user} {foo.bar} a}",
             ["user" => "Bob", "foo.bar" => "Bar"]);
-        $expected = ["info {Message {nothing} Bob Bar a}"];
-        $this->assertEquals($expected, $this->getLogs());
+        $this->assertEquals(
+            ["debug {Message {nothing} Bob Bar a}"],
+            $this->getLogs());
     }
 
     /**
-     * Test context that contain anything
+     * @covers \Seeren\Log\Logger::__construct
+     * @covers \Seeren\Log\Logger::log
+     * @covers \Seeren\Log\Logger::getLogs
      */
     public function testContextCanContainAnything()
     {
-        $this->getLogger()->warning(
+        $this->getLogger()->log(
+            "warning",
             "Crazy context data",
             [
                 "bool"     => true,
@@ -143,25 +256,33 @@ abstract class LoggerInterfaceTest extends \PHPUnit\Framework\TestCase
                 "int"      => 0,
                 "float"    => 0.5,
                 "nested"   => ["with object" => new DummyTest],
-                "object"   => new \DateTime,
+                "object"   => new Exception,
                 "resource" => fopen("php://memory", "r"),
             ]);
-        $expected = ["warning Crazy context data"];
-        $this->assertEquals($expected, $this->getLogs());
+        $this->assertEquals(
+            ["warning Crazy context data"],
+            $this->getLogs());
     }
 
     /**
-     * Test context exception key
+     * @covers \Seeren\Log\Logger::__construct
+     * @covers \Seeren\Log\Logger::log
+     * @covers \Seeren\Log\Logger::getLogs
      */
     public function testContextExceptionKeyCanBeExceptionOrOtherValues()
     {
         $logger = $this->getLogger();
-        $logger->warning("Random message", ["exception" => "oops"]);
-        $logger->critical(
+        $logger->log(
+            "warning",
+            "Random message",
+            ["exception" => "foo"]);
+        $logger->log(
+            "critical",
             "Uncaught Exception!",
-            ["exception" => new \LogicException("Fail")]);
-        $expected = ["warning Random message", "critical Uncaught Exception!"];
-        $this->assertEquals($expected, $this->getLogs());
+            ["exception" => new Exception]);
+        $this->assertEquals(
+            ["warning Random message", "critical Uncaught Exception!"],
+            $this->getLogs());
     }
 
 }

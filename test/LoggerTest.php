@@ -40,7 +40,7 @@ class LoggerTest extends LoggerInterfaceTest
     * 
     * @return LoggerInterface
     */
-   public final function getLogger(): LoggerInterface
+   protected final function getLogger(): LoggerInterface
    {
        if (!$this->logger) {
            $this->logger = (new ReflectionClass(Logger::class))

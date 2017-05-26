@@ -10,7 +10,7 @@
  *
  * @copyright (c) Cyril Ichti <consultant@seeren.fr>
  * @link http://www.seeren.fr/ Seeren
- * @version 1.0.3
+ * @version 1.0.4
  */
 
 namespace Seeren\Log\Test;
@@ -37,7 +37,15 @@ abstract class LogLevelInterfaceTest extends \PHPUnit\Framework\TestCase
     abstract protected function getLogLevel(): LogLevelInterface;
 
    /**
-    * Test LogLevel::level
+    * @covers \Seeren\Log\LogLevel::__construct
+    * @covers \Seeren\Log\LogLevel::level
+    * @covers \Seeren\Log\LogLevel::emergency
+    * @covers \Seeren\Log\LogLevel::critical
+    * @covers \Seeren\Log\LogLevel::error
+    * @covers \Seeren\Log\LogLevel::warning
+    * @covers \Seeren\Log\LogLevel::notice
+    * @covers \Seeren\Log\LogLevel::info
+    * @covers \Seeren\Log\LogLevel::debug
     */
    public final function testLevel()
    {

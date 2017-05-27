@@ -16,7 +16,7 @@ composer require seeren/log dev-master
 
 ## Logger Usage
 
-### `Seeren\Log\Logger`
+#### `Seeren\Log\Logger`
 `Seeren\Log\Logger` handle logs message, you can extends this class for customize log storage.
 The log file location is by default in a log directory in the root project, but he can be specified at construction
 ```php
@@ -31,22 +31,22 @@ $message = (new Logger)->log(
 ```
 Different duration for a log location can be used choosing Daily, Monthly or Yeardly
 
-### `Seeren\Log\Daily`
+#### `Seeren\Log\Daily`
 ```php
 $logger = new Daily;
 ```
 
-### `Seeren\Log\Monthly`
+#### `Seeren\Log\Monthly`
 ```php
 $logger = new Monthly;
 ```
-### `Seeren\Log\Yeardly`
+#### `Seeren\Log\Yeardly`
 ```php
 $logger = new Yeardly;
 ```
 ## Level Usage
 
-### `Seeren\Log\LogLevel`
+#### `Seeren\Log\LogLevel`
 LogLevel determine level corresponding to a predefined constant error
 ```php
 $level = (new LogLevel)->level(E_USER_ERROR);

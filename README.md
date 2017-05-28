@@ -14,7 +14,7 @@ Require this package with [composer](https://getcomposer.org/)
 composer require seeren/log dev-master
 ```
 
-## Logger Usage
+## Log Usage
 
 #### `Seeren\Log\Logger`
 `Seeren\Log\Logger` handle logs message, you can extends this class for customize log storage.
@@ -44,7 +44,7 @@ $logger = new Monthly;
 ```php
 $logger = new Yeardly;
 ```
-## Level Usage
+## Log Level Usage
 
 #### `Seeren\Log\LogLevel`
 LogLevel determine level corresponding to a predefined constant error
@@ -53,7 +53,10 @@ $level = (new LogLevel)->level(E_USER_ERROR);
 ```
 He can be used with a logger for determine a method to call
 ```php
-$message = (new Daily)->{(new LogLevel)->level(E_USER_ERROR)}("Message");
+$message = (new Daily)->{(new LogLevel)->level(E_USER_ERROR)}(
+    "info",
+    "{user} is logged",
+    ["user" => "Bob");
 ```
 
 ## Run the tests
@@ -66,6 +69,8 @@ Run [phpunit](https://phpunit.de/) with [Xdebug](https://xdebug.org/) enabled an
 phpunit
 ```
 
-## Authors
-Original Author and Development Lead
-* **Cyril Ichti** - [seeren](https://github.com/seeren)
+##  Contributors
+* **Cyril Ichti** - *Initial work* - [seeren](https://github.com/seeren)
+
+## License
+This project is licensed under the **MIT License** - see the [license](LICENSE.md) file for details.

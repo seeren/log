@@ -59,7 +59,7 @@ $message = (new Daily)->{(new LogLevel)->level(E_USER_ERROR)}(
     ["user" => "Bob");
 ```
 
-## Run the tests
+## Run Unit tests
 Install dependencies
 ```
 composer update

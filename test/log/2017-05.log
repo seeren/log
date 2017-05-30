@@ -130,3 +130,14 @@
 26:03-38-36 debug {Message {nothing} Bob Bar a}
 26:03-38-36 warning Crazy context data
 26:03-38-36 warning Crazy context data
+30:18-44-54 alert message of level alert with context: Bob
+30:18-44-54 critical message of level critical with context: Bob
+30:18-44-54 debug message of level debug with context: Bob
+30:18-44-54 emergency message of level emergency with context: Bob
+30:18-44-54 error message of level error with context: Bob
+30:18-44-54 info message of level info with context: Bob
+30:18-44-54 notice message of level notice with context: Bob
+30:18-44-54 warning message of level warning with context: Bob
+30:18-44-54 debug {Message {nothing} Bob Bar a}
+30:18-44-54 warning Crazy context data
+30:18-44-54 warning Crazy context data

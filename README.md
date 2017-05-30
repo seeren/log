@@ -66,7 +66,16 @@ composer update
 ```
 Run [phpunit](https://phpunit.de/) with [Xdebug](https://xdebug.org/) enabled and [OPcache](http://php.net/manual/fr/book.opcache.php) disabled for coverage
 ```
-phpunit
+./vendor/bin/phpunit
+```
+## Run Coverage
+Install dependencies
+```
+composer update
+```
+Run [coveralls](https://coveralls.io/) for check coverage
+```
+./vendor/bin/coveralls -v
 ```
 
 ##  Contributors

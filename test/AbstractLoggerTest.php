@@ -46,7 +46,7 @@ abstract class AbstractLoggerTest extends \PHPUnit\Framework\TestCase
     /**
      * Assert implements
      */
-    protected final function assertImplements()
+    protected function assertImplements()
     {
         $this->assertInstanceOf(LoggerInterface::class, $this->getLogger());
     }

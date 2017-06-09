@@ -31,19 +31,6 @@ $message = (new Logger)->log(
 ```
 Different duration for a log location can be used choosing Daily, Monthly or Yeardly
 
-#### `Seeren\Log\Daily`
-```php
-$logger = new Daily;
-```
-
-#### `Seeren\Log\Monthly`
-```php
-$logger = new Monthly;
-```
-#### `Seeren\Log\Yeardly`
-```php
-$logger = new Yeardly;
-```
 ## Log Level Usage
 
 #### `Seeren\Log\LogLevel`
@@ -82,4 +69,4 @@ Run [coveralls](https://coveralls.io/) for check coverage
 * **Cyril Ichti** - *Initial work* - [seeren](https://github.com/seeren)
 
 ## License
-This project is licensed under the **MIT License** - see the [license](LICENSE.md) file for details.
+This project is licensed under the **MIT License** - see the [license](LICENSE) file for details.

@@ -1,7 +1,7 @@
 {
     "name": "seeren/log",
     "description": "Log message and determine level",
-    "keywords": ["logger", "psr-3"],
+    "keywords": ["psr-3", "logger", "loglevel"],
     "type": "library",
     "license": "MIT",
     "authors": [

@@ -69,7 +69,7 @@ class DailyTest extends AbstractLoggerTest
     */
    public function testImplements()
    {
-       parent::assertImplements();
+       parent::testImplements();
    }
 
    /**
@@ -185,7 +185,7 @@ class DailyTest extends AbstractLoggerTest
     */
    public function testThrowsOnInvalidLevel()
    {
-       parent::assertThrowsOnInvalidLevel();
+       parent::testThrowsOnInvalidLevel();
    }
 
    /**
@@ -197,7 +197,7 @@ class DailyTest extends AbstractLoggerTest
     */
    public function testContextReplacement()
    {
-        parent::assertContextReplacement();
+        parent::testContextReplacement();
    }
 
    /**
@@ -209,7 +209,7 @@ class DailyTest extends AbstractLoggerTest
     */
    public function testContextCanContainAnything()
    {
-        parent::assertContextCanContainAnything();
+        parent::testContextCanContainAnything();
    }
 
    /**
@@ -221,7 +221,7 @@ class DailyTest extends AbstractLoggerTest
     */
    public function testContextExceptionKeyCanBeExceptionOrOtherValues()
    {
-        parent::assertContextCanContainAnything();
+        parent::testContextCanContainAnything();
    }
 
 }

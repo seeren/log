@@ -10,7 +10,7 @@
  *
  * @copyright (c) Cyril Ichti <consultant@seeren.fr>
  * @link https://github.com/seeren/log
- * @version 1.0.1
+ * @version 2.0.1
  */
 
 namespace Seeren\Log\Test;
@@ -42,18 +42,10 @@ abstract class AbstractLoggerTest extends \PHPUnit\Framework\TestCase
     * @return string[]
     */
     abstract protected function getLogs();
-
-    /**
-     * Assert implements
-     */
-    protected function assertImplements()
-    {
-        $this->assertInstanceOf(LoggerInterface::class, $this->getLogger());
-    }
-
+    
     /**
      * Assert levels
-     * 
+     *
      * @param string $level
      */
     protected function assertLevels(string $level)
@@ -62,23 +54,31 @@ abstract class AbstractLoggerTest extends \PHPUnit\Framework\TestCase
         $logger = $this->getLogger();
         $logger->{$level}($message, ["user" => "Bob"]);
         $this->assertEquals([
-                $level." message of level " . $level . " with context: Bob",
-            ],
+            $level." message of level " . $level . " with context: Bob",
+        ],
             $this->getLogs());
     }
 
     /**
-     * Assert invalid argument exception
+     * Test implements
      */
-    protected function assertThrowsOnInvalidLevel()
+    public function testImplements()
+    {
+        $this->assertInstanceOf(LoggerInterface::class, $this->getLogger());
+    }
+
+    /**
+     * Test invalid argument exception
+     */
+    public function testThrowsOnInvalidLevel()
     {
         $this->getLogger()->log("invalid level", "Foo");
     }
 
     /**
-     * Assert context replacement
+     * Test context replacement
      */
-    protected function assertContextReplacement()
+    public function testContextReplacement()
     {
         $logger = $this->getLogger();
         $logger->log(
@@ -91,9 +91,9 @@ abstract class AbstractLoggerTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * Assert context that contain anything
+     * Test context that contain anything
      */
-    protected function assertContextCanContainAnything()
+    public function testContextCanContainAnything()
     {
         $this->getLogger()->log(
             "warning",
@@ -112,9 +112,9 @@ abstract class AbstractLoggerTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * Assert context key
+     * Test context key
      */
-    protected function assertContextExceptionKeyCanBeExceptionOrOtherValues()
+    public function testContextExceptionKeyCanBeExceptionOrOtherValues()
     {
         $logger = $this->getLogger();
         $logger->log(

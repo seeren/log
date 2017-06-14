@@ -130,3 +130,50 @@
 05-30:18-44-54 debug {Message {nothing} Bob Bar a}
 05-30:18-44-54 warning Crazy context data
 05-30:18-44-54 warning Crazy context data
+06-14:21-54-36 alert message of level alert with context: Bob
+06-14:21-54-37 critical message of level critical with context: Bob
+06-14:21-54-37 debug message of level debug with context: Bob
+06-14:21-54-37 emergency message of level emergency with context: Bob
+06-14:21-54-37 error message of level error with context: Bob
+06-14:21-54-37 info message of level info with context: Bob
+06-14:21-54-37 notice message of level notice with context: Bob
+06-14:21-54-37 warning message of level warning with context: Bob
+06-14:21-54-37 debug {Message {nothing} Bob Bar a}
+06-14:21-54-37 warning Crazy context data
+06-14:21-54-37 warning Crazy context data
+06-14:21-58-06 alert message of level alert with context: Bob
+06-14:21-58-06 critical message of level critical with context: Bob
+06-14:21-58-06 debug message of level debug with context: Bob
+06-14:21-58-06 emergency message of level emergency with context: Bob
+06-14:21-58-06 error message of level error with context: Bob
+06-14:21-58-06 info message of level info with context: Bob
+06-14:21-58-06 notice message of level notice with context: Bob
+06-14:21-58-06 warning message of level warning with context: Bob
+06-14:21-58-06 debug {Message {nothing} Bob Bar a}
+06-14:21-58-06 warning Crazy context data
+06-14:21-58-06 warning Crazy context data
+06-14:21-59-55 debug {Message {nothing} Bob Bar a}
+06-14:21-59-55 warning Crazy context data
+06-14:21-59-55 warning Crazy context data
+06-14:22-00-43 alert message of level alert with context: Bob
+06-14:22-00-43 critical message of level critical with context: Bob
+06-14:22-00-43 debug message of level debug with context: Bob
+06-14:22-00-43 emergency message of level emergency with context: Bob
+06-14:22-00-43 error message of level error with context: Bob
+06-14:22-00-43 info message of level info with context: Bob
+06-14:22-00-43 notice message of level notice with context: Bob
+06-14:22-00-43 warning message of level warning with context: Bob
+06-14:22-00-43 debug {Message {nothing} Bob Bar a}
+06-14:22-00-43 warning Crazy context data
+06-14:22-00-43 warning Crazy context data
+06-14:22-02-28 alert message of level alert with context: Bob
+06-14:22-02-28 critical message of level critical with context: Bob
+06-14:22-02-28 debug message of level debug with context: Bob
+06-14:22-02-28 emergency message of level emergency with context: Bob
+06-14:22-02-28 error message of level error with context: Bob
+06-14:22-02-28 info message of level info with context: Bob
+06-14:22-02-28 notice message of level notice with context: Bob
+06-14:22-02-28 warning message of level warning with context: Bob
+06-14:22-02-28 debug {Message {nothing} Bob Bar a}
+06-14:22-02-28 warning Crazy context data
+06-14:22-02-28 warning Crazy context data

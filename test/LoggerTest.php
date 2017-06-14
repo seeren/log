@@ -10,7 +10,7 @@
  *
  * @copyright (c) Cyril Ichti <consultant@seeren.fr>
  * @link https://github.com/seeren/log
- * @version 1.0.2
+ * @version 2.0.1
  */
 
 namespace Seeren\Log\Test;
@@ -64,7 +64,7 @@ class LoggerTest extends AbstractLoggerTest
     */
    public function testImplements()
    {
-       parent::assertImplements();
+       parent::testImplements();
    }
 
    /**
@@ -162,7 +162,7 @@ class LoggerTest extends AbstractLoggerTest
     */
    public function testThrowsOnInvalidLevel()
    {
-        parent::assertThrowsOnInvalidLevel();
+        parent::testThrowsOnInvalidLevel();
    }
 
    /**
@@ -172,7 +172,7 @@ class LoggerTest extends AbstractLoggerTest
     */
    public function testContextReplacement()
    {
-        parent::assertContextReplacement();
+        parent::testContextReplacement();
    }
 
    /**
@@ -182,7 +182,7 @@ class LoggerTest extends AbstractLoggerTest
     */
    public function testContextCanContainAnything()
    {
-        parent::assertContextCanContainAnything();
+        parent::testContextCanContainAnything();
    }
 
    /**
@@ -192,7 +192,7 @@ class LoggerTest extends AbstractLoggerTest
     */
    public function testContextExceptionKeyCanBeExceptionOrOtherValues()
    {
-        parent::assertContextCanContainAnything();
+        parent::testContextCanContainAnything();
    }
 
 }

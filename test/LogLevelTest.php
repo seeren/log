@@ -10,7 +10,7 @@
  *
  * @copyright (c) Cyril Ichti <consultant@seeren.fr>
  * @link https://github.com/seeren/log
- * @version 1.0.2
+ * @version 1.0.3
  */
 
 namespace Seeren\Log\Test;
@@ -44,7 +44,7 @@ class LogLevelTest extends AbstractLogLevelTest
      */
     public function testImplements()
     {
-        parent::assertImplements();
+        parent::testImplements();
     }
 
     /**
@@ -60,7 +60,7 @@ class LogLevelTest extends AbstractLogLevelTest
      */
     public function testLevel()
     {
-        parent::assetLevel();
+        parent::testLevel();
     }
 
 }

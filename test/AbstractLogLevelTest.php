@@ -10,7 +10,7 @@
  *
  * @copyright (c) Cyril Ichti <consultant@seeren.fr>
  * @link https://github.com/seeren/log
- * @version 1.0.1
+ * @version 1.0.2
  */
 
 namespace Seeren\Log\Test;
@@ -37,17 +37,17 @@ abstract class AbstractLogLevelTest extends \PHPUnit\Framework\TestCase
     abstract protected function getLogLevel(): LogLevelInterface;
 
     /**
-     * Assert implements
+     * Test implements
      */
-    protected function assertImplements()
+    public function testImplements()
     {
         $this->assertInstanceOf(LogLevelInterface::class, $this->getLogLevel());
     }
 
    /**
-    * Asset level
+    * Test level
     */
-   protected function assetLevel()
+    public function testLevel()
    {
         $mock = $this->getLogLevel();
         $this->assertTrue(

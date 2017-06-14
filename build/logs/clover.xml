@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1497470544">
-  <project timestamp="1497470544">
+<coverage generated="1497480761">
+  <project timestamp="1497480761">
     <package name="Seeren\Log">
       <file name="C:\xampp\htdocs\seeren-dev-master\log\src/Daily.php">
         <class name="Daily" namespace="Seeren\Log" fullPackage="Log" category="Seeren" package="Log">

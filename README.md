@@ -2,11 +2,10 @@
 [![Build Status](https://travis-ci.org/seeren/log.svg?branch=master)](https://travis-ci.org/seeren/log) [![Coverage Status](https://coveralls.io/repos/github/seeren/log/badge.svg?branch=master)](https://coveralls.io/github/seeren/log?branch=master) [![Packagist](https://img.shields.io/packagist/dt/seeren/log.svg)](https://packagist.org/packages/seeren/log/stats) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/79594fda319241f787ac5342cb0a1836)](https://www.codacy.com/app/seeren/log?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=seeren/log&amp;utm_campaign=Badge_Grade) [![Packagist](https://img.shields.io/packagist/v/seeren/log.svg)](https://packagist.org/packages/seeren/log) [![Packagist](https://img.shields.io/packagist/l/seeren/log.svg)](LICENSE)
 
 **Log message and determine level**
+> This package contain implementations of the [PSR-3 logger interfaces](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-3-logger-interface.md)
 
 ## Features
-* [Psr-3](http://www.php-fig.org/psr/psr-3/) implementation
-* Manage log location
-* Choose log  duration
+* Manage log location and  duration
 
 ## Installation
 Require this package with [composer](https://getcomposer.org/)
@@ -17,7 +16,7 @@ composer require seeren/log dev-master
 ## Log Usage
 
 #### `Seeren\Log\Daily`
-Loggers handle log messages in a file, the file location is by default in a "log" directory of the root project directory, but he can be specified at construction
+Loggers handle log messages in a file, the file location is by default in a "log" directory of the root project directory, but his location can be specified at construction.  Different duration for a log location can be used choosing Daily, Monthly or Yeardly
 
 ```php
 $message = (new Daily)->log(
@@ -25,7 +24,6 @@ $message = (new Daily)->log(
     "{user} is logged",
     ["user" => "Bob"]);
 ```
-Different duration for a log location can be used choosing Daily, Monthly or Yeardly
 
 ## Log Level Usage
 

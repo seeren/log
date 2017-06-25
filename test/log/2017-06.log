@@ -1,0 +1,11 @@
+26:00-58-35 alert message of level alert with context: Bob
+26:00-58-35 critical message of level critical with context: Bob
+26:00-58-35 debug message of level debug with context: Bob
+26:00-58-35 emergency message of level emergency with context: Bob
+26:00-58-35 error message of level error with context: Bob
+26:00-58-35 info message of level info with context: Bob
+26:00-58-35 notice message of level notice with context: Bob
+26:00-58-35 warning message of level warning with context: Bob
+26:00-58-35 debug {Message {nothing} Bob Bar a}
+26:00-58-35 warning Crazy context data
+26:00-58-35 warning Crazy context data

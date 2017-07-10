@@ -32,7 +32,6 @@ LogLevel determine level corresponding to a predefined constant error. He can be
 ```php
 $message = (new Daily)
 ->{(new LogLevel)->level(E_USER_ERROR)}(
-    "info",
     "{user} is logged",
     ["user" => "Bob");
 ```

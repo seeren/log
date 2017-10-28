@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1498431513">
-  <project timestamp="1498431513">
+<coverage generated="1509206146">
+  <project timestamp="1509206146">
     <package name="Seeren\Log">
-      <file name="C:\xampp\htdocs\seeren-dev-master\log\src/Daily.php">
+      <file name="C:\xampp\htdocs\dev-master.seeren\log\src/Daily.php">
         <class name="Daily" namespace="Seeren\Log" fullPackage="Log" category="Seeren" package="Log">
           <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="9" coveredelements="9"/>
         </class>
@@ -17,7 +17,7 @@
         <line num="56" type="stmt" count="11"/>
         <metrics loc="59" ncloc="24" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="9" coveredelements="9"/>
       </file>
-      <file name="C:\xampp\htdocs\seeren-dev-master\log\src/LogLevel.php">
+      <file name="C:\xampp\htdocs\dev-master.seeren\log\src/LogLevel.php">
         <class name="LogLevel" namespace="Seeren\Log" fullPackage="Log" category="Seeren" package="Log">
           <metrics complexity="26" methods="9" coveredmethods="9" conditionals="0" coveredconditionals="0" statements="34" coveredstatements="34" elements="43" coveredelements="43"/>
         </class>
@@ -66,7 +66,7 @@
         <line num="148" type="stmt" count="1"/>
         <metrics loc="151" ncloc="80" classes="1" methods="9" coveredmethods="9" conditionals="0" coveredconditionals="0" statements="34" coveredstatements="34" elements="43" coveredelements="43"/>
       </file>
-      <file name="C:\xampp\htdocs\seeren-dev-master\log\src/Logger.php">
+      <file name="C:\xampp\htdocs\dev-master.seeren\log\src/Logger.php">
         <class name="Logger" namespace="Seeren\Log" fullPackage="Log" category="Seeren" package="Log">
           <metrics complexity="15" methods="11" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="25" coveredstatements="25" elements="36" coveredelements="36"/>
         </class>
@@ -108,7 +108,7 @@
         <line num="197" type="stmt" count="44"/>
         <metrics loc="200" ncloc="89" classes="1" methods="11" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="25" coveredstatements="25" elements="36" coveredelements="36"/>
       </file>
-      <file name="C:\xampp\htdocs\seeren-dev-master\log\src/Monthly.php">
+      <file name="C:\xampp\htdocs\dev-master.seeren\log\src/Monthly.php">
         <class name="Monthly" namespace="Seeren\Log" fullPackage="Log" category="Seeren" package="Log">
           <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="9" coveredelements="9"/>
         </class>
@@ -123,7 +123,7 @@
         <line num="56" type="stmt" count="11"/>
         <metrics loc="59" ncloc="24" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="9" coveredelements="9"/>
       </file>
-      <file name="C:\xampp\htdocs\seeren-dev-master\log\src/Yeardly.php">
+      <file name="C:\xampp\htdocs\dev-master.seeren\log\src/Yeardly.php">
         <class name="Yeardly" namespace="Seeren\Log" fullPackage="Log" category="Seeren" package="Log">
           <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="9" coveredelements="9"/>
         </class>
@@ -139,7 +139,7 @@
         <metrics loc="59" ncloc="24" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="9" coveredelements="9"/>
       </file>
     </package>
-    <file name="C:\xampp\htdocs\seeren-dev-master\log\src/LogLevelInterface.php">
+    <file name="C:\xampp\htdocs\dev-master.seeren\log\src/LogLevelInterface.php">
       <metrics loc="69" ncloc="21" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
     <metrics files="6" loc="597" ncloc="262" classes="5" methods="26" coveredmethods="26" conditionals="0" coveredconditionals="0" statements="80" coveredstatements="80" elements="106" coveredelements="106"/>

@@ -9,3 +9,36 @@
 06-26:00-58-35 debug {Message {nothing} Bob Bar a}
 06-26:00-58-35 warning Crazy context data
 06-26:00-58-35 warning Crazy context data
+08-31:14-53-10 alert message of level alert with context: Bob
+08-31:14-53-10 critical message of level critical with context: Bob
+08-31:14-53-10 debug message of level debug with context: Bob
+08-31:14-53-10 emergency message of level emergency with context: Bob
+08-31:14-53-10 error message of level error with context: Bob
+08-31:14-53-10 info message of level info with context: Bob
+08-31:14-53-10 notice message of level notice with context: Bob
+08-31:14-53-10 warning message of level warning with context: Bob
+08-31:14-53-11 debug {Message {nothing} Bob Bar a}
+08-31:14-53-11 warning Crazy context data
+08-31:14-53-11 warning Crazy context data
+08-31:14-53-56 alert message of level alert with context: Bob
+08-31:14-53-56 critical message of level critical with context: Bob
+08-31:14-53-56 debug message of level debug with context: Bob
+08-31:14-53-56 emergency message of level emergency with context: Bob
+08-31:14-53-56 error message of level error with context: Bob
+08-31:14-53-56 info message of level info with context: Bob
+08-31:14-53-56 notice message of level notice with context: Bob
+08-31:14-53-56 warning message of level warning with context: Bob
+08-31:14-53-56 debug {Message {nothing} Bob Bar a}
+08-31:14-53-56 warning Crazy context data
+08-31:14-53-56 warning Crazy context data
+10-28:17-55-47 alert message of level alert with context: Bob
+10-28:17-55-47 critical message of level critical with context: Bob
+10-28:17-55-47 debug message of level debug with context: Bob
+10-28:17-55-47 emergency message of level emergency with context: Bob
+10-28:17-55-47 error message of level error with context: Bob
+10-28:17-55-47 info message of level info with context: Bob
+10-28:17-55-47 notice message of level notice with context: Bob
+10-28:17-55-47 warning message of level warning with context: Bob
+10-28:17-55-47 debug {Message {nothing} Bob Bar a}
+10-28:17-55-47 warning Crazy context data
+10-28:17-55-47 warning Crazy context data

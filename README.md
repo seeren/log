@@ -5,7 +5,7 @@
 > This package contain implementations of the [PSR-3 logger interfaces](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-3-logger-interface.md)
 
 ## Features
-* Manage log location and  duration
+* Manage log level, location and duration
 
 ## Installation
 Require this package with [composer](https://getcomposer.org/)
@@ -13,50 +13,40 @@ Require this package with [composer](https://getcomposer.org/)
 composer require seeren/log dev-master
 ```
 
-## Log Usage
+## Usage
 
 #### `Seeren\Log\Daily`
-Loggers handle log messages in a file, the file location is by default in a "log" directory of the root project directory, but his location can be specified at construction.  Different duration for a log location can be used choosing Daily, Monthly or Yeardly
 
-```php
-$message = (new Daily)->log(
-    "info",
-    "{user} is logged",
-    ["user" => "Bob"]);
-```
-
-## Log Level Usage
-
-#### `Seeren\Log\LogLevel`
-LogLevel determine level corresponding to a predefined constant error. He can be used with a logger for determine a method to call, very helpfull for log errors
+Log message in a Daily generated file with optional slug and data
 ```php
 $message = (new Daily)
-->{(new LogLevel)->level(E_USER_ERROR)}(
-    "{user} is logged",
-    ["user" => "Bob");
+->log("info", "{user} is logged", [
+    "user" => "Bob"
+]);
 ```
 
-## Run Unit tests
-Install dependencies
+#### `Seeren\Log\LogLevel`
+
+Determine psr-3 action to call for predefined constant error.
+```php
+$message = (new Monthly)
+->{(new LogLevel)->level(E_USER_ERROR)}("{user} is logged", [
+    "user" => "Bob"
+]);
 ```
-composer update
-```
-Run [phpunit](https://phpunit.de/) with [Xdebug](https://xdebug.org/) enabled and [OPcache](http://php.net/manual/fr/book.opcache.php) disabled for coverage
+
+## Run tests
+
+Run [phpunit](https://phpunit.de/) with [Xdebug](https://xdebug.org/) enable and [OPcache](http://php.net/manual/fr/book.opcache.php) disable
 ```
 ./vendor/bin/phpunit
 ```
 ## Run Coverage
-Install dependencies
-```
-composer update
-```
-Run [coveralls](https://coveralls.io/) for check coverage
+
+Run [coveralls](https://coveralls.io/)
 ```
 ./vendor/bin/php-coveralls -v
 ```
-
-##  Contributors
-* **Cyril Ichti** - *Initial work* - [seeren](https://github.com/seeren)
 
 ## License
 This project is licensed under the **MIT License** - see the [license](LICENSE) file for details.

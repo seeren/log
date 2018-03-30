@@ -1,14 +1,13 @@
 <?php
 
 /**
- * This file contain Seeren\Log\Test\LoggerTest class
  *     __
  *    / /__ __ __ __ __ __
  *   / // // // // // // /
  *  /_// // // // // // /
  *    /_//_//_//_//_//_/
  *
- * @copyright (c) Cyril Ichti <consultant@seeren.fr>
+ * @author Cyril Ichti <consultant@seeren.fr>
  * @link https://github.com/seeren/log
  * @version 2.0.1
  */
@@ -37,9 +36,8 @@ class LoggerTest extends AbstractLoggerTest
        $logger;
 
    /**
-    * Get logger
-    * 
-    * @return LoggerInterface
+    * {@inheritDoc}
+    * @see \Seeren\Log\Test\AbstractLoggerTest::getLogger()
     */
    protected function getLogger(): LoggerInterface
    {       if (!$this->logger) {
@@ -50,9 +48,8 @@ class LoggerTest extends AbstractLoggerTest
    }
 
    /**
-    * Get logs
-    * 
-    * @return string[]
+    * {@inheritDoc}
+    * @see \Seeren\Log\Test\AbstractLoggerTest::getLogs()
     */
    protected function getLogs()
    {

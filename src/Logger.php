@@ -1,14 +1,13 @@
 <?php
 
 /**
- * This file contain Seeren\Log\Logger class
  *     __
  *    / /__ __ __ __ __ __
  *   / // // // // // // /
  *  /_// // // // // // /
  *    /_//_//_//_//_//_/
  *
- * @copyright (c) Cyril Ichti <consultant@seeren.fr>
+ * @author Cyril Ichti <consultant@seeren.fr>
  * @link https://github.com/seeren/log
  * @version 1.0.1
  */
@@ -29,63 +28,51 @@ class Logger implements LoggerInterface
 
    private
        /**
-        * @var array log collection
+        * @var array
         */
        $log;
 
    protected
        /**
-        * @var string include path
+        * @var string
         */
        $includePath;
 
    /**
-    * Construct Logger
-    * 
-    * @param string $includePath include path
+    * @param string $includePath
     * @return null
     */
    public function __construct(string $includePath = null)
    {
-       $this->includePath = rtrim(
-           (!$includePath
-         ? (dirname(__FILE__, 5)) . DIRECTORY_SEPARATOR . "log"
-         : $includePath), DIRECTORY_SEPARATOR
-       ) . DIRECTORY_SEPARATOR;
        $this->log = [];
+       $this->includePath = rtrim((!$includePath
+                          ? (dirname(__FILE__, 5)) . DIRECTORY_SEPARATOR . "log"
+                          : $includePath), DIRECTORY_SEPARATOR)
+                          . DIRECTORY_SEPARATOR;
    }
 
    /**
-    * Get logs
-    * Implemented for pass Psr\Log\Test\LoggerInterfaceTest
+    * Implemented for Psr\Log\Test\LoggerInterfaceTest
     * 
-    * @return array log collection
+    * @return array
     */
    public final function getLogs()
    {
        return $this->log;
    }
 
-   /**
-    * System is unusable
-    *
-    * @param string $message error message
-    * @param array $context error context
-    *
-    * @return string logged or not
-    */
+    /**
+     * {@inheritDoc}
+     * @see \Psr\Log\LoggerInterface::emergency()
+     */
    public function emergency($message, array $context = []): string
    {
        return $this->log("emergency", $message, $context);
    }
     
    /**
-    * Action must be taken immediately
-    *
-    * @param string $message error message
-    * @param array $context error context
-    *
-    * @return bool logged or not
+    * {@inheritDoc}
+    * @see \Psr\Log\LoggerInterface::alert()
     */
    public function alert($message, array $context = []): string
    {
@@ -93,12 +80,8 @@ class Logger implements LoggerInterface
    }
     
    /**
-    * Critical conditions
-    *
-    * @param string $message error message
-    * @param array $context error context
-    *
-    * @return bool logged or not
+    * {@inheritDoc}
+    * @see \Psr\Log\LoggerInterface::critical()
     */
    public function critical($message, array $context = []): string
    {
@@ -106,12 +89,8 @@ class Logger implements LoggerInterface
    }
     
    /**
-    * Runtime errors that do not require immediate action
-    * 
-    * @param string $message error message
-    * @param array $context error context
-    *
-    * @return bool logged or not
+    * {@inheritDoc}
+    * @see \Psr\Log\LoggerInterface::error()
     */
    public function error($message, array $context = []): string
    {
@@ -119,12 +98,8 @@ class Logger implements LoggerInterface
    }
     
    /**
-    * Exceptional occurrences that are not errors
-    *
-    * @param string $message error message
-    * @param array $context error context
-    *
-    * @return bool logged or not
+    * {@inheritDoc}
+    * @see \Psr\Log\LoggerInterface::warning()
     */
    public function warning($message, array $context = []): string
    {
@@ -132,12 +107,8 @@ class Logger implements LoggerInterface
    }
     
    /**
-    * Normal but significant events
-    *
-    * @param string $message error message
-    * @param array $context error context
-    *
-    * @return bool logged or not
+    * {@inheritDoc}
+    * @see \Psr\Log\LoggerInterface::notice()
     */
    public function notice($message, array $context = []): string
    {
@@ -145,12 +116,8 @@ class Logger implements LoggerInterface
    }
 
    /**
-    * Interesting events
-    *
-    * @param string $message error message
-    * @param array $context error context
-    *
-    * @return bool logged or not
+    * {@inheritDoc}
+    * @see \Psr\Log\LoggerInterface::info()
     */
    public function info($message, array $context = []): string
    {
@@ -158,12 +125,8 @@ class Logger implements LoggerInterface
    }
 
    /**
-    * Detailed debug information
-    *
-    * @param string $message error message
-    * @param array $context error context
-    *
-    * @return bool logged or not
+    * {@inheritDoc}
+    * @see \Psr\Log\LoggerInterface::debug()
     */
    public function debug($message, array $context = []): string
    {
@@ -171,15 +134,8 @@ class Logger implements LoggerInterface
    }
 
    /**
-    * Logs with an arbitrary level
-    *
-    * @param mixed  $level error level
-    * @param string $message error message
-    * @param array $context error context
-    *
-    * @return string log
-    * 
-    * @throws \InvalidArgumentException for invalid level
+    * {@inheritDoc}
+    * @see \Psr\Log\LoggerInterface::log()
     */
    public function log($level, $message, array $context = []): string
    {

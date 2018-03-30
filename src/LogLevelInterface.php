@@ -1,14 +1,13 @@
 <?php
 
 /**
- * This file contain Seeren\Log\LogLevelInterface interface
  *     __
  *    / /__ __ __ __ __ __
  *   / // // // // // // /
  *  /_// // // // // // /
  *    /_//_//_//_//_//_/
  *
- * @copyright (c) Cyril Ichti <consultant@seeren.fr>
+ * @author Cyril Ichti <consultant@seeren.fr>
  * @link https://github.com/seeren/log
  * @version 1.0.1
  */
@@ -25,44 +24,52 @@ interface LogLevelInterface
 {
 
     const
+
         /**
-         * @var string log level
+         * @var string
          */
         EMERGENCY = "emergency",
+
         /**
-         * @var string log level
+         * @var string
          */
         ALERT     = "alert",
+
         /**
-         * @var string log level
+         * @var string
          */
         CRITICAL  = "critical",
+
         /**
-         * @var string log level
+         * @var string
          */
         ERROR     = "error",
+
         /**
-         * @var string log level
+         * @var string
          */
         WARNING   = "warning",
+
         /**
-         * @var string log level
+         * @var string
          */
         NOTICE    = "notice",
+
         /**
-         * @var string log level
+         * @var string
          */
         INFO      = "info",
+
         /**
-         * @var string log level
+         * @var string
          */
         DEBUG     = "debug";
 
    /**
     * Get level
     * 
-    * @param int $type error type
-    * @return string log level
+    * @param int $type
+    * @return string
     */
    public function level(int $type): string;
 

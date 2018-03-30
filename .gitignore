@@ -1,4 +1,6 @@
 /.settings/
+/test/log/
 /vendor/
-/.buildpath
-/.project
+.buildpath
+.project
+composer.lock

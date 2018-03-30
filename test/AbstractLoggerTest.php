@@ -1,14 +1,13 @@
 <?php
 
 /**
- * This file contain Seeren\Log\Test\AbstractLoggerTest class
  *     __
  *    / /__ __ __ __ __ __
  *   / // // // // // // /
  *  /_// // // // // // /
  *    /_//_//_//_//_//_/
  *
- * @copyright (c) Cyril Ichti <consultant@seeren.fr>
+ * @author Cyril Ichti <consultant@seeren.fr>
  * @link https://github.com/seeren/log
  * @version 2.0.1
  */
@@ -56,7 +55,7 @@ abstract class AbstractLoggerTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals([
             $level." message of level " . $level . " with context: Bob",
         ],
-            $this->getLogs());
+        $this->getLogs());
     }
 
     /**

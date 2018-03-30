@@ -52,7 +52,7 @@ composer update
 ```
 Run [coveralls](https://coveralls.io/) for check coverage
 ```
-./vendor/bin/coveralls -v
+./vendor/bin/php-coveralls -v
 ```
 
 ##  Contributors

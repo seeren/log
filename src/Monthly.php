@@ -1,14 +1,13 @@
 <?php
 
 /**
- * This file contain Seeren\Log\Monthly class
  *     __
  *    / /__ __ __ __ __ __
  *   / // // // // // // /
  *  /_// // // // // // /
  *    /_//_//_//_//_//_/
  *
- * @copyright (c) Cyril Ichti <consultant@seeren.fr>
+ * @author Cyril Ichti <consultant@seeren.fr>
  * @link https://github.com/seeren/log
  * @version 1.0.1
  */
@@ -25,10 +24,7 @@ class Monthly extends Logger
 {
 
    /**
-    * Construct Monthly
-    * 
-    * @param string $includePath include path
-    * @return null
+    * @param string $includePath
     */
    public function __construct(string $includePath = null)
    {
@@ -36,15 +32,8 @@ class Monthly extends Logger
    }
 
    /**
-    * Logs with an arbitrary level
-    *
-    * @param mixed  $level error level
-    * @param string $message error message
-    * @param array $context error context
-    *
-    * @return string log
-    * 
-    * @throws InvalidArgumentException for invalid level
+    * {@inheritDoc}
+    * @see \Seeren\Log\Logger::log()
     */
    public final function log($level, $message, array $context = []): string
    {

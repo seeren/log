@@ -1,14 +1,13 @@
 <?php
 
 /**
- * This file contain Seeren\Log\Test\LogLevelTest class
  *     __
  *    / /__ __ __ __ __ __
  *   / // // // // // // /
  *  /_// // // // // // /
  *    /_//_//_//_//_//_/
  *
- * @copyright (c) Cyril Ichti <consultant@seeren.fr>
+ * @author Cyril Ichti <consultant@seeren.fr>
  * @link https://github.com/seeren/log
  * @version 1.0.3
  */
@@ -30,9 +29,8 @@ class LogLevelTest extends AbstractLogLevelTest
 {
 
     /**
-     * Get LogLevelInterface
-     * 
-     * @return LogLevelInterface log level
+     * {@inheritDoc}
+     * @see \Seeren\Log\Test\AbstractLogLevelTest::getLogLevel()
      */
     protected final function getLogLevel(): LogLevelInterface
     {

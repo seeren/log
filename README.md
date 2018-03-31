@@ -35,7 +35,7 @@ $message = (new Monthly)
 ]);
 ```
 
-## Run tests
+## Run Tests
 
 Run [phpunit](https://phpunit.de/) with [Xdebug](https://xdebug.org/) enable and [OPcache](http://php.net/manual/fr/book.opcache.php) disable
 ```

@@ -20,7 +20,6 @@ use Seeren\Log\Level;
 abstract class AbstractLogger implements LoggerInterface
 {
 
-    public $foo;
     /**
      * @var string
      */

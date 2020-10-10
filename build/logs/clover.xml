@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1602336221">
-  <project timestamp="1602336221">
+<coverage generated="1602365940">
+  <project timestamp="1602365940">
     <file name="C:\Users\cyril\Documents\Projects\log\src\Level.php">
       <class name="Seeren\Log\Level" namespace="global">
         <metrics complexity="26" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="24" elements="32" coveredelements="32"/>

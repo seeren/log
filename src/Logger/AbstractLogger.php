@@ -38,7 +38,7 @@ abstract class AbstractLogger implements LoggerInterface
     public function __construct(string $includePath = null)
     {
         $this->includePath = rtrim(
-            $includePath ?? dirname(__FILE__, 5)
+            $includePath ?? dirname(__FILE__, 6)
             . DIRECTORY_SEPARATOR
             . 'var'
             . DIRECTORY_SEPARATOR

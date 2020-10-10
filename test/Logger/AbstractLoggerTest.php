@@ -104,7 +104,7 @@ class AbstractLoggerTest extends TestCase
     {
         $this->assertEquals(
             $property->getValue($this->getReflection()->newInstance()),
-            dirname(__FILE__, 5)
+            dirname(__FILE__, 6)
             . DIRECTORY_SEPARATOR
             . 'var'
             . DIRECTORY_SEPARATOR

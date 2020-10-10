@@ -40,10 +40,10 @@ class LoggerTest extends TestCase
         $includePath = __DIR__ . DIRECTORY_SEPARATOR . 'log';
         $mock = (new \ReflectionClass($className))->newInstance($includePath);
         $filename = $includePath . DIRECTORY_SEPARATOR . $date . '.log';
-        $message = '[' . $time . '] ' . $mock->log('error', 'Dummy') . "\n";
+        $message = $mock->log('error', 'Dummy') . "\n";
         $contents = file_get_contents($filename);
         unlink($filename);
-        $this->assertEquals(trim($message), trim($contents));
+        $this->assertNotFalse(stripos($contents, $message));
     }
 
 }

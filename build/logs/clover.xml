@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1602334477">
-  <project timestamp="1602334477">
+<coverage generated="1602336221">
+  <project timestamp="1602336221">
     <file name="C:\Users\cyril\Documents\Projects\log\src\Level.php">
       <class name="Seeren\Log\Level" namespace="global">
         <metrics complexity="26" methods="8" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="24" elements="32" coveredelements="32"/>
@@ -46,39 +46,39 @@
       <class name="Seeren\Log\Logger\AbstractLogger" namespace="global">
         <metrics complexity="13" methods="10" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="22" coveredstatements="22" elements="32" coveredelements="32"/>
       </class>
-      <line num="39" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="14"/>
+      <line num="38" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="14"/>
+      <line num="40" type="stmt" count="14"/>
       <line num="41" type="stmt" count="14"/>
-      <line num="42" type="stmt" count="14"/>
+      <line num="42" type="stmt" count="10"/>
       <line num="43" type="stmt" count="10"/>
       <line num="44" type="stmt" count="10"/>
-      <line num="45" type="stmt" count="10"/>
+      <line num="45" type="stmt" count="14"/>
       <line num="46" type="stmt" count="14"/>
-      <line num="47" type="stmt" count="14"/>
-      <line num="49" type="stmt" count="14"/>
-      <line num="55" type="method" name="emergency" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="57" type="stmt" count="1"/>
-      <line num="64" type="method" name="alert" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="66" type="stmt" count="1"/>
-      <line num="73" type="method" name="critical" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="75" type="stmt" count="1"/>
-      <line num="82" type="method" name="error" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="84" type="stmt" count="1"/>
-      <line num="91" type="method" name="warning" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="93" type="stmt" count="1"/>
-      <line num="100" type="method" name="notice" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="102" type="stmt" count="1"/>
-      <line num="109" type="method" name="info" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="111" type="stmt" count="1"/>
-      <line num="118" type="method" name="debug" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="120" type="stmt" count="1"/>
-      <line num="127" type="method" name="log" visibility="public" complexity="4" crap="4" count="12"/>
-      <line num="129" type="stmt" count="12"/>
-      <line num="130" type="stmt" count="1"/>
-      <line num="132" type="stmt" count="11"/>
+      <line num="48" type="stmt" count="14"/>
+      <line num="54" type="method" name="emergency" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="56" type="stmt" count="1"/>
+      <line num="63" type="method" name="alert" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="65" type="stmt" count="1"/>
+      <line num="72" type="method" name="critical" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="74" type="stmt" count="1"/>
+      <line num="81" type="method" name="error" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="83" type="stmt" count="1"/>
+      <line num="90" type="method" name="warning" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="92" type="stmt" count="1"/>
+      <line num="99" type="method" name="notice" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="101" type="stmt" count="1"/>
+      <line num="108" type="method" name="info" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="110" type="stmt" count="1"/>
+      <line num="117" type="method" name="debug" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="119" type="stmt" count="1"/>
+      <line num="126" type="method" name="log" visibility="public" complexity="4" crap="4" count="12"/>
+      <line num="128" type="stmt" count="12"/>
+      <line num="129" type="stmt" count="1"/>
+      <line num="131" type="stmt" count="11"/>
+      <line num="132" type="stmt" count="8"/>
       <line num="133" type="stmt" count="8"/>
-      <line num="134" type="stmt" count="8"/>
-      <line num="137" type="stmt" count="11"/>
-      <metrics loc="140" ncloc="82" classes="1" methods="10" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="22" coveredstatements="22" elements="32" coveredelements="32"/>
+      <line num="136" type="stmt" count="11"/>
+      <metrics loc="139" ncloc="81" classes="1" methods="10" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="22" coveredstatements="22" elements="32" coveredelements="32"/>
     </file>
     <file name="C:\Users\cyril\Documents\Projects\log\src\Logger\Daily.php">
       <class name="Seeren\Log\Logger\Daily" namespace="global">
@@ -113,6 +113,6 @@
       <line num="29" type="stmt" count="1"/>
       <metrics loc="32" ncloc="17" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
     </file>
-    <metrics files="6" loc="412" ncloc="226" classes="5" methods="21" coveredmethods="21" conditionals="0" coveredconditionals="0" statements="58" coveredstatements="58" elements="79" coveredelements="79"/>
+    <metrics files="6" loc="411" ncloc="225" classes="5" methods="21" coveredmethods="21" conditionals="0" coveredconditionals="0" statements="58" coveredstatements="58" elements="79" coveredelements="79"/>
   </project>
 </coverage>

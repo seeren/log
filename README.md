@@ -22,10 +22,22 @@ Log message in a `Daily`, `Monthly` or `Yearly` generated file with optional dat
 
 ```php
 $logger = new Daily();
-$logger->log("info", "Bob is logged");
-$logger->log("error", "Something happe: {message}", [
-    "message" => "Dummy message"
-]);
+```
+
+Log using levels
+
+```php
+$logger->log('info', 'Bob is logged');
+```
+
+Pass slug and context optionnaly.
+
+```php
+$logger->log(
+    'error',
+    'Something happen: {message}',
+    ['message' => 'Dummy message']
+);
 ```
 
 ___

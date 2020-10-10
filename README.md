@@ -30,7 +30,7 @@ Log using levels
 $logger->log('info', 'Bob is logged');
 ```
 
-Pass slug and context optionnaly.
+Pass slug and context optionnaly
 
 ```php
 $logger->log(
@@ -44,7 +44,7 @@ ___
 
 ## Seeren\Log\Level
 
-Determine `PSR-3` action with `Level` from a constant error code.
+Determine `PSR-3` action with `Level` from a constant error code
 
 ```php
 $level = new Level();

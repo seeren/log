@@ -1,17 +1,5 @@
 <?php
 
-/**
- *     __
- *    / /__ __ __ __ __ __
- *   / // // // // // // /
- *  /_// // // // // // /
- *    /_//_//_//_//_//_/
- *
- * @author Cyril Ichti <consultant@seeren.fr>
- * @link https://github.com/seeren/log
- * @version 1.0.1
- */
-
 namespace Seeren\Log;
 
 /**
@@ -24,16 +12,8 @@ class Monthly extends Logger
 {
 
    /**
-    * @param string $includePath
-    */
-   public function __construct(string $includePath = null)
-   {
-       parent::__construct($includePath);
-   }
-
-   /**
     * {@inheritDoc}
-    * @see \Seeren\Log\Logger::log()
+    * @see Logger::log()
     */
    public final function log($level, $message, array $context = []): string
    {

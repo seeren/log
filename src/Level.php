@@ -1,26 +1,19 @@
 <?php
 
+namespace Seeren\Log;
+
 /**
+ * Class for determine error level
+ *
  *     __
  *    / /__ __ __ __ __ __
  *   / // // // // // // /
  *  /_// // // // // // /
  *    /_//_//_//_//_//_/
  *
- * @author Cyril Ichti <consultant@seeren.fr>
- * @link https://github.com/seeren/log
- * @version 1.0.1
+ * @package Seeren\Log
  */
-
-namespace Seeren\Log;
-
-/**
- * Class for determine log level
- *
- * @category Seeren
- * @package Log
- */
-class LogLevel implements LogLevelInterface
+class Level implements LevelInterface
 {
 
     /**

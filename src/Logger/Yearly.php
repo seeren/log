@@ -1,39 +1,24 @@
 <?php
 
+namespace Seeren\Log;
+
 /**
+ * Class for yearly logs
+ *
  *     __
  *    / /__ __ __ __ __ __
  *   / // // // // // // /
  *  /_// // // // // // /
  *    /_//_//_//_//_//_/
  *
- * @author Cyril Ichti <consultant@seeren.fr>
- * @link https://github.com/seeren/log
- * @version 1.0.1
- */
-
-namespace Seeren\Log;
-
-/**
- * Class for yeardly log
- * 
- * @category Seeren
- * @package Log
+ * @package Seeren\Log
  */
 class Yeardly extends Logger
 {
 
    /**
-    * @param string $includePath
-    */
-   public function __construct(string $includePath = null)
-   {
-       parent::__construct($includePath);
-   }
-
-   /**
     * {@inheritDoc}
-    * @see \Seeren\Log\Logger::log()
+    * @see Logger::log()
     */
    public final function log($level, $message, array $context = []): string
    {

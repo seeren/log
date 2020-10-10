@@ -17,9 +17,9 @@ class LoggerTest extends TestCase
     public function loggers(): array
     {
         return [
-            [Daily::class, date("Y-m-d"), date("H:i:s")],
-            [Monthly::class, date("Y-m"), date("d.H:i:s")],
-            [Yearly::class, date("Y"), date("m-d.H:i:s")],
+            [Daily::class, date("Y-m-d")],
+            [Monthly::class, date("Y-m")],
+            [Yearly::class, date("Y")],
         ];
     }
 
@@ -32,10 +32,9 @@ class LoggerTest extends TestCase
      * @covers       \Seeren\Log\Logger\Yearly::write
      * @param string $className
      * @param string $date
-     * @param string $time
      * @throws ReflectionException
      */
-    public function testWrite(string $className, string $date, string $time): void
+    public function testWrite(string $className, string $date): void
     {
         $includePath = __DIR__ . DIRECTORY_SEPARATOR . 'log';
         $mock = (new \ReflectionClass($className))->newInstance($includePath);

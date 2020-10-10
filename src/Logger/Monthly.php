@@ -1,28 +1,32 @@
 <?php
 
-namespace Seeren\Log;
+namespace Seeren\Log\Logger;
 
 /**
- * Class for monthly log
- * 
- * @category Seeren
- * @package Log
+ * Class for monthly logs
+ *
+ *     __
+ *    / /__ __ __ __ __ __
+ *   / // // // // // // /
+ *  /_// // // // // // /
+ *    /_//_//_//_//_//_/
+ *
+ * @package Seeren\Log\Logger
  */
-class Monthly extends Logger
+class Monthly extends AbstractLogger
 {
 
-   /**
-    * {@inheritDoc}
-    * @see Logger::log()
-    */
-   public final function log($level, $message, array $context = []): string
-   {
-       $body = parent::log($level, $message, $context);
-       if (($file = fopen($this->includePath . date("Y-m") . ".log", "ab"))) {
-            fwrite($file, date("d:H-i-s ") . $body . "\n");
+    /**
+     * {@inheritDoc}
+     * @see AbstractLogger::write()
+     */
+    protected final function write(string $log, string $includePath): string
+    {
+        if (($file = fopen($includePath . DIRECTORY_SEPARATOR . date("Y-m") . ".log", "ab"))) {
+            fwrite($file, '[' . date("d.H:i:s") . '] ' . $log . "\n");
             fclose($file);
         }
-       return $body;
-   }
+        return $log;
+    }
 
 }

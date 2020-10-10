@@ -1,6 +1,6 @@
 <?php
 
-namespace Seeren\Log;
+namespace Seeren\Log\Logger;
 
 /**
  * Class for daily logs
@@ -11,23 +11,22 @@ namespace Seeren\Log;
  *  /_// // // // // // /
  *    /_//_//_//_//_//_/
  *
- * @package Seeren\Log
+ * @package Seeren\Log\Logger
  */
-class Daily extends Logger
+class Daily extends AbstractLogger
 {
 
     /**
      * {@inheritDoc}
-     * @see Logger::log()
+     * @see AbstractLogger::write()
      */
-    public final function log($level, $message, array $context = []): string
+    protected final function write(string $log, string $includePath): string
     {
-        $body = parent::log($level, $message, $context);
-        if (($file = fopen($this->includePath . date("Y-m-d") . ".log", "ab"))) {
-            fwrite($file, date("H-i-s ") . $body . "\n");
+        if (($file = fopen($includePath . DIRECTORY_SEPARATOR . date("Y-m-d") . ".log", "ab"))) {
+            fwrite($file, '[' . date("H:i:s") . '] ' . $log . "\n");
             fclose($file);
         }
-        return $body;
+        return $log;
     }
 
 }

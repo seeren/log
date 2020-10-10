@@ -1,6 +1,6 @@
 <?php
 
-namespace Seeren\Log;
+namespace Seeren\Log\Logger;
 
 /**
  * Class for yearly logs
@@ -11,23 +11,22 @@ namespace Seeren\Log;
  *  /_// // // // // // /
  *    /_//_//_//_//_//_/
  *
- * @package Seeren\Log
+ * @package Seeren\Log\Logger
  */
-class Yeardly extends Logger
+class Yearly extends AbstractLogger
 {
 
-   /**
-    * {@inheritDoc}
-    * @see Logger::log()
-    */
-   public final function log($level, $message, array $context = []): string
-   {
-       $body = parent::log($level, $message, $context);
-       if (($file = fopen($this->includePath . date("Y") . ".log", "ab"))) {
-            fwrite($file, date("m-d:H-i-s ") . $body . "\n");
+    /**
+     * {@inheritDoc}
+     * @see AbstractLogger::write()
+     */
+    protected final function write(string $log, string $includePath): string
+    {
+        if (($file = fopen($includePath . DIRECTORY_SEPARATOR . date("Y") . ".log", "ab"))) {
+            fwrite($file, '[' . date("m-d.H:i:s") . '] ' . $log . "\n");
             fclose($file);
         }
-       return $body;
-   }
+        return $log;
+    }
 
 }

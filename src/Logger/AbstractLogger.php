@@ -4,6 +4,7 @@ namespace Seeren\Log\Logger;
 
 use Psr\Log\LoggerInterface;
 use Psr\Log\InvalidArgumentException;
+use Seeren\Log\Level;
 
 /**
  * Class to Log
@@ -16,13 +17,21 @@ use Psr\Log\InvalidArgumentException;
  *
  * @package Seeren\Log\Logger
  */
-class Logger implements LoggerInterface
+abstract class AbstractLogger implements LoggerInterface
 {
 
+    public $foo;
     /**
      * @var string
      */
-    protected string $includePath;
+    private string $includePath;
+
+    /**
+     * @param string $log
+     * @param string $includePath
+     * @return string
+     */
+    abstract protected function write(string $log, string $includePath): string;
 
     /**
      * @param string|null $includePath
@@ -30,7 +39,11 @@ class Logger implements LoggerInterface
     public function __construct(string $includePath = null)
     {
         $this->includePath = rtrim(
-            $includePath ?? dirname(__FILE__, 5) . DIRECTORY_SEPARATOR . 'var' . DIRECTORY_SEPARATOR . 'log',
+            $includePath ?? dirname(__FILE__, 5)
+            . DIRECTORY_SEPARATOR
+            . 'var'
+            . DIRECTORY_SEPARATOR
+            . 'log',
             DIRECTORY_SEPARATOR
         );
     }
@@ -121,7 +134,7 @@ class Logger implements LoggerInterface
                 $message = str_replace('{' . $key . '}', $value, $message);
             }
         }
-        return $level . ' ' . trim($message);
+        return $this->write(strtoupper($level) . ': ' . trim($message), $this->includePath);
     }
 
 }

@@ -17,28 +17,30 @@ class Level implements LevelInterface
 {
 
     /**
-     * LogLevel
-     */
-    public function __construct()
-    {
-    }
-
-    /**
      * {@inheritDoc}
-     * @see \Seeren\Log\LogLevelInterface::level()
+     * @see LevelInterface::level()
      */
     public final function level(int $code): string
     {
         switch ($code) {
-            case 0: return self::ALERT;
-            case $this->emergency($code): return self::EMERGENCY;
-            case $this->critical($code): return self::CRITICAL;
-            case $this->error($code): return self::ERROR;
-            case $this->warning($code): return self::WARNING;
-            case $this->notice($code): return self::NOTICE;
-            case $this->info($code): return self::INFO;
-            case $this->debug($code): return self::DEBUG;
-            default: return self::ALERT;
+            case 0:
+                return self::ALERT;
+            case $this->emergency($code):
+                return self::EMERGENCY;
+            case $this->critical($code):
+                return self::CRITICAL;
+            case $this->error($code):
+                return self::ERROR;
+            case $this->warning($code):
+                return self::WARNING;
+            case $this->notice($code):
+                return self::NOTICE;
+            case $this->info($code):
+                return self::INFO;
+            case $this->debug($code):
+                return self::DEBUG;
+            default:
+                return self::ALERT;
         }
     }
 
@@ -46,7 +48,7 @@ class Level implements LevelInterface
      * @param int $code
      * @return boolean
      */
-    protected function emergency($code): bool
+    private function emergency(int $code): bool
     {
         return $code > E_USER_DEPRECATED;
     }
@@ -55,7 +57,7 @@ class Level implements LevelInterface
      * @param int $code
      * @return boolean critical
      */
-    protected function critical($code): bool
+    private function critical(int $code): bool
     {
         return $code === E_ERROR || $code === E_CORE_ERROR || $code === E_COMPILE_ERROR || $code === E_PARSE;
     }
@@ -64,7 +66,7 @@ class Level implements LevelInterface
      * @param int $code
      * @return boolean
      */
-    protected function error($code): bool
+    private function error(int $code): bool
     {
         return $code === E_USER_ERROR || $code === E_RECOVERABLE_ERROR;
     }
@@ -73,7 +75,7 @@ class Level implements LevelInterface
      * @param int $code
      * @return boolean
      */
-    protected function warning($code): bool
+    private function warning(int $code): bool
     {
         return $code === E_WARNING || $code === E_CORE_WARNING || $code === E_COMPILE_WARNING || $code === E_USER_WARNING;
     }
@@ -82,7 +84,7 @@ class Level implements LevelInterface
      * @param int $code
      * @return boolean
      */
-    protected function notice($code): bool
+    private function notice(int $code): bool
     {
         return $code === E_NOTICE || $code === E_USER_NOTICE;
     }
@@ -91,7 +93,7 @@ class Level implements LevelInterface
      * @param int $code
      * @return boolean
      */
-    protected function info($code): bool
+    private function info(int $code): bool
     {
         return $code === E_STRICT;
     }
@@ -100,7 +102,7 @@ class Level implements LevelInterface
      * @param int $code
      * @return boolean
      */
-    protected function debug($code): bool
+    private function debug(int $code): bool
     {
         return $code === E_DEPRECATED || $code === E_USER_DEPRECATED;
     }

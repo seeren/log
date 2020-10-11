@@ -8,7 +8,7 @@ ___
 
 ## Installation
 
-Seeren\Log is a [PSR-3 logger interfaces](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-3-logger-interface.md) implementations.
+Seeren\Log is a [PSR-3 logger interfaces](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-3-logger-interface.md) implementation
 
 ```
 composer require seeren/log

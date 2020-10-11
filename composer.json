@@ -39,6 +39,13 @@
 			"mkdir log",
 			"cd log",
 			"echo '' > .gitkeep"
+		],
+		"post-update-cmd": [
+			"mkdir var",
+			"cd var",
+			"mkdir log",
+			"cd log",
+			"echo '' > .gitkeep"
 		]
 	}
 }

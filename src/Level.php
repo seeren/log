@@ -3,7 +3,7 @@
 namespace Seeren\Log;
 
 /**
- * Class for determine error level
+ * Class to determine error level
  *
  *     __
  *    / /__ __ __ __ __ __

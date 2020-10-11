@@ -3,7 +3,7 @@
 namespace Seeren\Log\Logger;
 
 /**
- * Class for monthly logs
+ * Class to monthly logs
  *
  *     __
  *    / /__ __ __ __ __ __

@@ -3,7 +3,7 @@
 namespace Seeren\Log;
 
 /**
- * Interface LevelInterface for determine error level
+ * Interface LevelInterface to determine error level
  *     __
  *    / /__ __ __ __ __ __
  *   / // // // // // // /

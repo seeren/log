@@ -1,9 +1,7 @@
 /.idea/
-/.settings/
+/build/
 /public/
 /test/log/
 /vendor/
-.buildpath
-.project
 composer.lock
 .phpunit.result.cache

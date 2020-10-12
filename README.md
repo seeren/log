@@ -21,18 +21,42 @@ ___
 Log message in a `Daily`, `Monthly` or `Yearly` generated file with optional data slug
 
 ```php
+use Seeren\Log\Logger\Daily;
+
 $logger = new Daily();
+```
+
+By default, log folder is in `/var/log`
+
+```bash
+project/
+└─ var/
+   └─ log/
+```
+
+Log directory can be specified at construction
+
+```php
+use Seeren\Log\Logger\Daily;
+
+$logger = new Daily('/log');
 ```
 
 Log using levels
 
 ```php
+use Seeren\Log\Logger\Daily;
+
+$logger = new Daily();
 $logger->log('info', 'Bob is logged');
 ```
 
 Pass slug and context optionnaly
 
 ```php
+use Seeren\Log\Logger\Daily;
+
+$logger = new Daily();
 $logger->log(
     'error',
     'Something happen: {message}',
@@ -47,8 +71,10 @@ ___
 Determine `PSR-3` action with `Level` from a constant error code
 
 ```php
+use Seeren\Log\Level;
+
 $level = new Level();
-$action = $level->level(E_USER_ERROR);
+$logLevel = $level->level(E_USER_ERROR);
 ```
 
 ___

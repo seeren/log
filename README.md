@@ -1,6 +1,6 @@
 # Seeren\\Log
 
-[![Build](https://travis-ci.org/seeren/log.svg?branch=master)](https://travis-ci.org/seeren/log)
+[![Build](https://app.travis-ci.com/seeren/log.svg?branch=master)](https://app.travis-ci.com/seeren/log)
 [![Require](https://poser.pugx.org/seeren/log/require/php)](https://packagist.org/packages/seeren/log)
 [![Coverage](https://coveralls.io/repos/github/seeren/log/badge.svg?branch=master)](https://coveralls.io/github/seeren/log?branch=master)
 [![Download](https://img.shields.io/packagist/dt/seeren/log.svg)](https://packagist.org/packages/seeren/log/stats)

@@ -4,136 +4,82 @@ namespace Seeren\Log\Logger;
 
 use Psr\Log\LoggerInterface;
 use Psr\Log\InvalidArgumentException;
-use Seeren\Log\Level;
+use Psr\Log\LogLevel;
 
-/**
- * Class to Log
- *
- *     __
- *    / /__ __ __ __ __ __
- *   / // // // // // // /
- *  /_// // // // // // /
- *    /_//_//_//_//_//_/
- *
- * @package Seeren\Log\Logger
- */
 abstract class AbstractLogger implements LoggerInterface
 {
 
-    /**
-     * @var string
-     */
-    private string $includePath;
+    abstract protected function getFileName(): string;
 
-    /**
-     * @param string $log
-     * @param string $includePath
-     * @return string
-     */
-    abstract protected function write(string $log, string $includePath): string;
+    abstract protected function getLogName(): string;
 
-    /**
-     * @param string|null $includePath
-     */
-    public function __construct(string $includePath = null)
+    public function __construct(private string $includePath = '')
     {
-        $this->includePath = rtrim(
-            $includePath ?? dirname(__FILE__, 6)
-            . DIRECTORY_SEPARATOR
-            . 'var'
-            . DIRECTORY_SEPARATOR
-            . 'log',
-            DIRECTORY_SEPARATOR
-        );
-    }
-
-    /**
-     * {@inheritDoc}
-     * @see LoggerInterface::emergency()
-     */
-    public function emergency($message, array $context = []): string
-    {
-        return $this->log(__FUNCTION__, $message, $context);
-    }
-
-    /**
-     * {@inheritDoc}
-     * @see LoggerInterface::alert()
-     */
-    public function alert($message, array $context = []): string
-    {
-        return $this->log(__FUNCTION__, $message, $context);
-    }
-
-    /**
-     * {@inheritDoc}
-     * @see LoggerInterface::critical()
-     */
-    public function critical($message, array $context = []): string
-    {
-        return $this->log(__FUNCTION__, $message, $context);
-    }
-
-    /**
-     * {@inheritDoc}
-     * @see LoggerInterface::error()
-     */
-    public function error($message, array $context = []): string
-    {
-        return $this->log(__FUNCTION__, $message, $context);
-    }
-
-    /**
-     * {@inheritDoc}
-     * @see LoggerInterface::warning()
-     */
-    public function warning($message, array $context = []): string
-    {
-        return $this->log(__FUNCTION__, $message, $context);
-    }
-
-    /**
-     * {@inheritDoc}
-     * @see LoggerInterface::notice()
-     */
-    public function notice($message, array $context = []): string
-    {
-        return $this->log(__FUNCTION__, $message, $context);
-    }
-
-    /**
-     * {@inheritDoc}
-     * @see LoggerInterface::info()
-     */
-    public function info($message, array $context = []): string
-    {
-        return $this->log(__FUNCTION__, $message, $context);
-    }
-
-    /**
-     * {@inheritDoc}
-     * @see LoggerInterface::debug()
-     */
-    public function debug($message, array $context = []): string
-    {
-        return $this->log(__FUNCTION__, $message, $context);
-    }
-
-    /**
-     * {@inheritDoc}
-     * @see LoggerInterface::log()
-     */
-    public function log($level, $message, array $context = []): string
-    {
-        if (!defined(Level::class . "::" . strtoupper($level))) {
-            throw new InvalidArgumentException('Unknown level "' . $level . '"');
+        if (!$includePath) {
+            $includePath = dirname(__FILE__, 6);
         }
+        $separator = DIRECTORY_SEPARATOR;
+        $this->includePath = rtrim("{$includePath}{$separator}var{$separator}log", $separator);
+    }
+
+    public final function emergency(string|\Stringable $message, array $context = []): string
+    {
+        return $this->log(__FUNCTION__, $message, $context);
+    }
+
+    public final function alert(string|\Stringable $message, array $context = []): string
+    {
+        return $this->log(__FUNCTION__, $message, $context);
+    }
+
+    public final function critical(string|\Stringable $message, array $context = []): string
+    {
+        return $this->log(__FUNCTION__, $message, $context);
+    }
+
+    public final function error(string|\Stringable $message, array $context = []): string
+    {
+        return $this->log(__FUNCTION__, $message, $context);
+    }
+
+    public final function warning(string|\Stringable $message, array $context = []): string
+    {
+        return $this->log(__FUNCTION__, $message, $context);
+    }
+
+    public final function notice(string|\Stringable $message, array $context = []): string
+    {
+        return $this->log(__FUNCTION__, $message, $context);
+    }
+
+    public final function info(string|\Stringable $message, array $context = []): string
+    {
+        return $this->log(__FUNCTION__, $message, $context);
+    }
+
+    public final function debug(string|\Stringable $message, array $context = []): string
+    {
+        return $this->log(__FUNCTION__, $message, $context);
+    }
+
+    public final function log($level, string|\Stringable $message, array $context = []): string
+    {
+        $constName = strtoupper($level);
+        if (!is_string($level)
+            || !defined(LogLevel::class . "::" . $constName)) {
+            throw new InvalidArgumentException("Unknown level \"$level\"");
+        }
+        $message = trim($message);
         foreach ($context as $key => $value) {
             if (is_string($value)) {
-                $message = str_replace('{' . $key . '}', $value, $message);
+                $message = str_replace('{' . $key . '}', trim($value), $message);
             }
         }
-        return $this->write(strtoupper($level) . ': ' . trim($message), $this->includePath);
+        $message = $constName . ': ' . $message;
+        $file = fopen($this->includePath . DIRECTORY_SEPARATOR . $this->getFileName() . '.log', 'ab');
+        fwrite($file, '[' . $this->getLogName() . '] ' . $message . PHP_EOL);
+        fclose($file);
+        return $message;
     }
 
 }

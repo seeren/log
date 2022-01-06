@@ -6,17 +6,21 @@ use PHPUnit\Framework\TestCase;
 use Psr\Log\InvalidArgumentException;
 use Psr\Log\LogLevel;
 use ReflectionClass;
-use ReflectionException;
 use Seeren\Log\Logger\AbstractLogger;
 
 class AbstractLoggerTest extends TestCase
 {
 
-    /**
-     * @return array[]
-     *
-     * @throws ReflectionException
-     */
+    private function getReflection(): ReflectionClass
+    {
+        return new ReflectionClass(DummyAbstractLogger::class);
+    }
+
+    private function getMock(string $args = null): object
+    {
+        return $this->getReflection()->newInstance($args);
+    }
+
     public function includePath(): array
     {
         $property = $this->getReflection()->getParentClass()->getProperty('includePath');
@@ -26,9 +30,6 @@ class AbstractLoggerTest extends TestCase
         ];
     }
 
-    /**
-     * @return array[]
-     */
     public function levels(): array
     {
         return [
@@ -44,23 +45,6 @@ class AbstractLoggerTest extends TestCase
     }
 
     /**
-     * @return ReflectionClass
-     */
-    private final function getReflection(): ReflectionClass
-    {
-        return new ReflectionClass(DummyAbstractLogger::class);
-    }
-
-    /**
-     * @param array|null $args
-     * @return object
-     */
-    private final function getMock(array $args = null): object
-    {
-        return $this->getReflection()->newInstance($args);
-    }
-
-    /**
      * @dataProvider levels
      * @covers       \Seeren\Log\Logger\AbstractLogger::__construct
      * @covers       \Seeren\Log\Logger\AbstractLogger::log
@@ -72,12 +56,11 @@ class AbstractLoggerTest extends TestCase
      * @covers       \Seeren\Log\Logger\AbstractLogger::info
      * @covers       \Seeren\Log\Logger\AbstractLogger::notice
      * @covers       \Seeren\Log\Logger\AbstractLogger::warning
-     * @param $level
      */
     public function testLevels($level): void
     {
         $this->assertEquals(
-            $this->getMock()->{$level}('    Dummy {foo} {bar}    ', [
+            $this->getMock(__DIR__)->{$level}('    Dummy {foo} {bar}    ', [
                 'foo' => 'test',
                 'bar' => 'message'
             ]),
@@ -92,13 +75,12 @@ class AbstractLoggerTest extends TestCase
     public function testLogException(): void
     {
         $this->expectException(InvalidArgumentException::class);
-        $this->getMock()->log("Dummy", [true]);
+        $this->getMock(__DIR__)->log('Dummy', 'Message');
     }
 
     /**
      * @dataProvider includePath
      * @covers       \Seeren\Log\Logger\AbstractLogger
-     * @param $property
      */
     public function testDefaultIncludePath($property): void
     {
@@ -115,12 +97,11 @@ class AbstractLoggerTest extends TestCase
     /**
      * @dataProvider includePath
      * @covers       \Seeren\Log\Logger\AbstractLogger
-     * @param $property
      */
     public function testIncludePath($property): void
     {
         $this->assertEquals(
-            __DIR__,
+            __DIR__ . DIRECTORY_SEPARATOR . 'var' . DIRECTORY_SEPARATOR . 'log',
             $property->getValue($this->getReflection()->newInstance(__DIR__))
         );
     }
@@ -130,9 +111,14 @@ class AbstractLoggerTest extends TestCase
 class DummyAbstractLogger extends AbstractLogger
 {
 
-    protected function write(string $log, string $includePath): string
+    protected function getFileName(): string
     {
-        return $log;
+        return 'dummy';
+    }
+
+    protected function getLogName(): string
+    {
+        return 'dummy';
     }
 
 }

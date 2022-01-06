@@ -71,9 +71,9 @@ ___
 Determine `PSR-3` action with `Level` from a constant error code
 
 ```php
-use Seeren\Log\Level;
+use Seeren\Log\LevelResolver;
 
-$level = new Level();
+$level = new LevelResolver();
 $logLevel = $level->level(E_USER_ERROR);
 ```
 

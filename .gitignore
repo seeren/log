@@ -1,7 +1,5 @@
-/.idea/
-/build/
-/public/
-/test/log/
+/build
+/public
 /vendor/
 composer.lock
 .phpunit.result.cache

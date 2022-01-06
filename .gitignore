@@ -1,5 +1,4 @@
 /build
 /public
 /vendor/
-composer.lock
 .phpunit.result.cache
